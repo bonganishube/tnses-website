@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import Logo from '../../assets/logo.png';
 import Dropdown from './Dropdown';
-import DarkMode from './DarkMode'; // Assuming DarkMode is your toggle component
+import DarkMode from './DarkMode';
 import ResponsiveMenu from './ResponsiveMenu';
 import { HiMenuAlt3, HiMenuAlt1 } from 'react-icons/hi';
 
@@ -16,16 +16,16 @@ export const MenuLinks = [
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [sticky, setSticky] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light'); // Track theme state
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Handle sticky navbar logic
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setSticky(true); // Apply sticky class when scrolled past 50px
+        setSticky(true);
       } else {
-        setSticky(false); // Remove sticky class when scrolled back up
+        setSticky(false);
       }
     };
 
@@ -69,11 +69,11 @@ const Navbar = () => {
                   return (
                     <li 
                       key={id} 
-                      className="submenu-item" 
                       onMouseEnter={() => handleDropdownToggle(true)} 
                       onMouseLeave={() => handleDropdownToggle(false)}
+                      style={{ position: 'relative' }}  // Ensure the parent <li> has relative positioning
                     >
-                      <a href={link}>{name}</a>
+                      <a href={link}  className='nav-link'>{name}</a>
                       {dropdownOpen && <Dropdown isOpen={dropdownOpen} closeDropdown={() => setDropdownOpen(false)} />}
                     </li>
                   );
@@ -89,12 +89,12 @@ const Navbar = () => {
               <i className="fa fa-sign-out"></i>Sign In
             </button>
             <div className="darkmode-desktop">
-              <DarkMode setTheme={setTheme} theme={theme} /> {/* Pass theme state to DarkMode */}
+              <DarkMode setTheme={setTheme} theme={theme} />
             </div>
           </div>
           <div className="mobile-view">
             <div className="darkmode-mobile">
-              <DarkMode setTheme={setTheme} theme={theme} /> {/* Pass theme state to DarkMode */}
+              <DarkMode setTheme={setTheme} theme={theme} />
             </div>
             <button className="sign-in">
               <i className="fa fa-sign-out"></i>Sign In

@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 500px;
   }
 
 .carousel-image::before {
@@ -42,6 +43,7 @@
     height: 100%; /* Ensure the image fills the container height */
     display: block;
     object-fit: cover; /* Image covers the full area */
+    object-position: center center;
 
   }
   
@@ -244,15 +246,53 @@ span {
   }
 
   @media only screen and (max-width: 480px) {
-    .carousel-caption {
-      font-size: 0.9rem; /* Even smaller caption text */
-      width: 80%; /* Ensure it doesn't overflow */
-      height: 60%;
-      padding: 7px;
-      bottom: 4%;
+    .carousel-container {
+      min-height: 70vh;
     }
 
+    .carousel-image-mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1; 
+    }
   
+  /* Individual slide */
+  .carousel-image-mobile {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Styling for the carousel image */
+  .carousel-image-mobile img {
+    width: 100%; /* Ensure the image fills the container width */
+    height: 100%; /* Ensure the image fills the container height */
+    display: block;
+    object-fit: contain; /* Image covers the full area */
+    object-position: center center;
+
+  }
+
+    .carousel-image img {
+      display: none;
+    }
+    .carousel-caption {
+      font-size: 0.9rem; /* Even smaller caption text */
+      width: 75%; /* Ensure it doesn't overflow */
+      height: 35%;
+      padding: 7px;
+      padding-top: 13px;
+      bottom: 10%;
+    }
     .carousel-control-prev,
     .carousel-control-next {
       font-size: 1rem; /* Make buttons even smaller */
@@ -321,9 +361,16 @@ span {
   
   /* Responsive Design for smaller screens */
   @media only screen and (min-width: 480px) and (max-width: 768px) {  
+    .carousel-container {
+      height: 500px;
+    }
     .carousel-image img {
       object-position: center;
     }
+
+    .carousel-image-mobile img {
+      display: none;
+    } 
   
     .carousel-caption {
       font-size: 1rem; /* Make the text smaller */
@@ -349,5 +396,10 @@ span {
       margin-left: 6px;
     }
   }
-  
+
+  @media only screen and (min-width: 768px) {
+    .carousel-image-mobile img {
+      display: none;
+    } 
+  }
   

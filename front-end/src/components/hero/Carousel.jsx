@@ -3,6 +3,9 @@ import './Carousel.css';
 import blueprint from '../../assets/carousel/blueprint.jpg';
 import googleEducation from '../../assets/carousel/google-education.jpg';
 import readiness from '../../assets/carousel/readiness.jpg';
+import blueprintMobile from '../../assets/carousel/blueprint-mobile.jpg';
+import googleEducationMobile from '../../assets/carousel/google-education-mobile.jpg';
+import readinessMobile from '../../assets/carousel/readiness-mobile.jpg';
 import darkArrow from '../../assets/carousel/dark-arrow.png';
 
 
@@ -14,8 +17,28 @@ const CarouselImage = ({ imageSrc }) => {
   );
 };
 
+const CarouselImageMobile = ({ imageSrcMobile }) => {
+  return (
+    <div className="carousel-image-mobile">
+      <img src={imageSrcMobile} alt="carousel" />
+    </div>
+  );
+};
+
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const mobile = [
+    {
+      image: googleEducationMobile,
+    },
+    {
+      image: blueprintMobile,
+    },
+    {
+      image: readinessMobile,
+    },
+  ];
 
   const slides = [
     {
@@ -50,6 +73,7 @@ const Carousel = () => {
       <div className="carousel-container">
         <div className="carousel-slide">
           <CarouselImage imageSrc={slides[activeIndex].image} />
+          <CarouselImageMobile imageSrcMobile={mobile[activeIndex].image} />
           <div className="carousel-controls">
           <button className="carousel-control-prev" onClick={() => setActiveIndex((activeIndex - 1 + slides.length) % slides.length)}>
             &#10094;
@@ -74,6 +98,8 @@ const Carousel = () => {
           </div>
         </div>
       </div>
+
+      
   );
 };
 
