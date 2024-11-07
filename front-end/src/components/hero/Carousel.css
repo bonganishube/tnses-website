@@ -1,0 +1,353 @@
+.dark .carousel-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+
+.carousel-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.carousel-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1; 
+}
+  
+  /* Individual slide */
+  .carousel-image {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Styling for the carousel image */
+  .carousel-image img {
+    width: 100%; /* Ensure the image fills the container width */
+    height: 100%; /* Ensure the image fills the container height */
+    display: block;
+    object-fit: cover; /* Image covers the full area */
+
+  }
+  
+  /* The caption that appears over the image */
+  .carousel-caption {
+    position: absolute;
+    bottom: 10%; /* Position from the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%); /* Center the caption horizontally */
+    text-align: center;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.4); /* Semi-transparent background */
+    padding: 17px;
+    padding-top: 2px;
+    border-radius: 12px; /* Optional: rounded corners for the caption */
+    width: 80%; /* Adjust width to make caption fit better */
+    max-width: 600px; /* Prevent it from getting too wide */
+    font-family: 'Marcellus', sans-serif;
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 1.4;
+    z-index: 2;
+  }
+
+  .dark .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+
+  
+  /* Carousel Controls (Next and Previous buttons) */
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%); /* Position the controls vertically centered */
+    z-index: 1; /* Ensure the buttons are on top of the images */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    font-size: 2rem; /* Larger arrow size */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+  }
+  
+  /* Optional: Add custom left/right arrow styles if needed */
+  .carousel-control-prev {
+    left: 10px; /* Position the previous button to the left */
+  }
+  
+  .carousel-control-next {
+    right: 10px; /* Position the next button to the right */
+  }
+
+  .g-one {
+    color: #4285F4;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 500;
+  } 
+
+  .o-one {
+    color: #EA4335;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .o-two {
+    color: #FBBC03;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .g-two {
+    color: #4285F4;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .l {
+    color: #35A853;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .e {
+    color: #EA4335;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .for-education {
+    color: #bfbfbf;
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  /* Base styles for each letter */
+span {
+  opacity: 0;  /* Start with letters invisible */
+  transform: translateY(20px);  /* Start from below */
+  animation-duration: 5s;  /* Slower animation duration */
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite; /* Make the animation repeat indefinitely */
+  animation-direction: alternate;  /* Reverse the animation to go up and down */
+}
+
+/* Animation for each letter */
+.g-one, .o-one, .o-two, .g-two, .l, .e, .for-education {
+  animation-name: fadeInUp;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);  /* Start below the normal position */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);  /* Reach normal position halfway */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);  /* Return below the normal position */
+  }
+}
+
+/* Stagger animations by using different animation delays */
+.g-one {
+  animation-delay: 0.2s;  /* Longer delay for smoother effect */
+}
+
+.o-one {
+  animation-delay: 0.4s;
+}
+
+.o-two {
+  animation-delay: 0.6s;
+}
+
+.g-two {
+  animation-delay: 0.8s;
+}
+
+.l {
+  animation-delay: 1s;
+}
+
+.e {
+  animation-delay: 1.2s;
+}
+
+.for-education {
+  animation-delay: 1.4s;
+}
+
+
+  .hero p {
+    font-family: 'Marcellus';
+  }
+
+  .carousel-caption button {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .carousel-caption button img {
+    width: 18px;
+    margin-left: 9px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .carousel-caption {
+      font-size: 0.9rem; /* Even smaller caption text */
+      width: 80%; /* Ensure it doesn't overflow */
+      height: 60%;
+      padding: 7px;
+      bottom: 4%;
+    }
+
+  
+    .carousel-control-prev,
+    .carousel-control-next {
+      font-size: 1rem; /* Make buttons even smaller */
+    }
+    .g-one {
+      color: #4285F4;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 500;
+    } 
+  
+    .o-one {
+      color: #EA4335;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  
+    .o-two {
+      color: #FBBC03;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  
+    .g-two {
+      color: #4285F4;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  
+    .l {
+      color: #35A853;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  
+    .e {
+      color: #EA4335;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  
+    .for-education {
+      color: #bfbfbf;
+      font-family: 'Nunito';
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+    .carousel-caption button {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 1.3px;
+      border-radius: 8px;
+      padding: 5px 10px;
+      margin: 0 7px;
+    }
+    .carousel-caption button img {
+      width: 13px;
+      margin-left: 5px;
+    }
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media only screen and (min-width: 480px) and (max-width: 768px) {  
+    .carousel-image img {
+      object-position: center;
+    }
+  
+    .carousel-caption {
+      font-size: 1rem; /* Make the text smaller */
+      width: 90%; /* Make the caption width more flexible */
+    }
+  
+    /* Make navigation buttons smaller on mobile */
+    .carousel-control-prev,
+    .carousel-control-next {
+      font-size: 1.8rem; /* Slightly smaller arrows */
+      padding: 8px; /* Reduce button padding */
+    }
+    .carousel-caption button {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 1.3px;
+      border-radius: 8px;
+      padding: 6px 12px;
+      margin: 0 7px;
+    }
+    .carousel-caption button img {
+      width: 15px;
+      margin-left: 6px;
+    }
+  }
+  
+  

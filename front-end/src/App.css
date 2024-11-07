@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dark html {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.dark body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+/* Customize the scrollbar width */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Customize the track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light background for the track */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: black; /* Light background for the track */
+}
+
+/* Customize the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #172243; /* Navy blue color */
+  border-radius: 10px; /* Optional: Rounded corners for the thumb */
+  border: 3px solid #172243; /* Optional: Adds space around the thumb */
+}
+
+/* Optional: Customize when hovering over the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000080; /* Darker navy blue on hover */
+}
+
+
+

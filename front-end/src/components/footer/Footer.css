@@ -1,0 +1,154 @@
+/* Footer Contact Section */
+.footerContact {
+    background-color: #27ae60;
+    padding: 40px 0;
+    color: #fff;
+  }
+  .footerContact h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .footerContact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #1d2636;
+    padding: 50px 0;
+    color: #fff;
+    border-top: 1px solid #2c3e50;
+  }
+  
+  footer .container {
+    display: grid;
+    grid-template-columns: 6fr 2fr 2fr 1fr;
+    grid-gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  footer img {
+    width: 150px;
+  }
+  
+  footer h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  footer p {
+    color: grey;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  
+  footer input {
+    background-color: #fff;
+    padding: 17px;
+    width: 100%;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  footer button {
+    padding: 17px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  footer ul {
+    display: block;
+    padding: 0;
+  }
+  
+  footer ul li {
+    color: grey;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  footer .box {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Legal Section */
+  .legal {
+    text-align: center;
+    padding: 20px;
+    background: #1d2636;
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    footer .container {
+      grid-template-columns: 4fr 2fr 2fr;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    footer .container {
+      grid-template-columns: 3fr 3fr 2fr;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    footer .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    footer .box {
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footerContact h1 {
+      font-size: 30px;
+    }
+  
+    footer h2 {
+      font-size: 20px;
+    }
+  
+    footer h3 {
+      font-size: 16px;
+    }
+  
+    footer p {
+      font-size: 14px;
+    }
+  
+    footer input {
+      padding: 14px;
+    }
+  
+    footer ul li {
+      font-size: 12px;
+    }
+  
+    .legal {
+      font-size: 12px;
+    }
+  }
+  

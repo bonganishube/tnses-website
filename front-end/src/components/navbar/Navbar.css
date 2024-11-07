@@ -1,0 +1,208 @@
+.dark-nav .navbar-container {
+  background-color: #172243; /* Dark background when sticky */
+  color: white; /* Sticky navbar text color */
+  z-index: 1000; /* Ensure navbar is on top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for sticky effect */
+}
+
+.dark .navbar-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.navbar-container {
+    box-sizing: border-box;
+    max-width: 1280px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 1.25rem;
+    padding: 0 4rem 0 2rem;
+    border-radius: 16px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+.navbar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-items img {
+  width: 45px;
+  border-radius: 8px;
+  margin-top: 0.4rem;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Marcellus';
+  margin: 0.35rem 0 0 0.5rem;
+}
+  
+.desktop-view {
+    display: flex;  
+    align-items: center;   
+  }
+  
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+  }
+  
+.nav-links li {
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0 0.1rem;
+  }
+  
+.nav-link {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+.dark-nav .nav-link {
+  color: white;
+}
+  
+.nav-link:hover {
+    color: #FF6100;
+    border-bottom: 2px solid #FF6100;
+  
+  }
+
+nav .buttons {
+  display: flex;
+  align-items: center;
+  padding: 0 1.7rem;
+}
+
+
+.log-in:hover {
+    background-color: lightgrey;
+    color:#FF6100;
+}
+  
+.sign-in {
+    background-color: #FF6100;
+    color: white;
+    border: 2px solid #FF6100;
+    border-radius: 8px;
+    padding: 10px 18px;
+    margin: 16px 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+.sign-in i {
+    margin-right: 5px;
+}
+
+.darkmode-desktop {
+    margin: 4px 10px 0 10px;
+}
+
+.mobile-view {
+    display: flex;
+    align-items: center;
+}
+
+.darkmode-mobile {
+  width: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.himenualt1 {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 0.8rem;
+    margin-top: 0.35rem;
+  }
+
+.himenualt3 {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 0.8rem;
+    margin-top: 0.35rem;
+  }
+
+
+@media only screen and (max-width: 480px) {
+    .desktop-view {
+      display: none;
+    }
+    .navbar-container {
+      max-width: 480px;
+      border-radius: 8px;
+      padding-left: 1.3rem;
+    }
+    .navbar-items img {
+      width: 30px;
+      margin: 0.6rem 0 0.4rem 0;
+    }
+    .logo h1 {
+      font-size: 1rem;
+      margin-left: 0.3rem;
+      margin-bottom: 0.1rem;
+    }
+    .sign-in {
+      background-color: #FF6100;
+      color: white;
+      border: 2px solid #FF6100;
+      border-radius: 8px;
+      padding: 7px 13px;
+      margin: 1px 0 1px 10px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.65rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .nav-links {
+      margin-left: 2rem;
+    }
+    .nav-link {
+      font-size: 1rem;
+    }
+    .navbar-items img {
+      width: 40px;
+    }
+    .logo h1 {
+      font-size: 1.2rem;
+    }
+    .log-in {
+      font-weight: 500;
+      font-size: 0.8rem;
+    }
+    .sign-up {
+      font-weight: 500;
+      font-size: 0.8rem;
+    }
+  }
+
+@media only screen and (min-width: 768px) {
+    .mobile-view {
+      display: none;
+    }
+    
+}
+  
+  
+  

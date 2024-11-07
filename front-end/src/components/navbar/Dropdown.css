@@ -1,0 +1,41 @@
+.services-submenu {
+    width: 10rem;
+    position: absolute;
+    top: 67px;
+    left: 0;
+    text-align: start;
+    border-radius: 8px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .services-submenu.open {
+    display: block; /* Show when open */
+  }
+  
+  .dark-nav .services-submenu {
+    color: white;
+  }
+  
+  .services-submenu li {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+  }
+  
+  .submenu-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 1rem;
+  }
+  
+  .submenu-item:hover {
+    color: #FF6100;
+    border-bottom: 2px solid #FF6100;
+  }
+  

@@ -1,0 +1,20 @@
+.bisolidsun {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.bisolidmoon {
+    cursor: pointer;
+     font-size: 24px;
+}
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+    --bg-color: black;
+    --text-color: white;
+}

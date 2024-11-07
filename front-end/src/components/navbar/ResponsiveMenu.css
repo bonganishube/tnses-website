@@ -1,0 +1,92 @@
+.responsive-menu {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 16px 32px 24px; /* 16px top, 32px left/right, 24px bottom */
+    transition: all 0.2s;
+    z-index: 20;
+    border-top-right-radius: 1rem; /* rounded-r-xl */
+    border-bottom-right-radius: 1rem; /* rounded-r-xl */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .responsive-menu.show {
+    left: 0;
+  }
+  
+  .card {
+    /* Add any styles you need for the card here */
+  }
+  
+  .user-section {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .fa-user-circle {
+    margin-right: 15px;
+  }
+
+  .footer {
+    /* Add any styles you need for the footer here */
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-start {
+    justify-content: flex-start;
+  }
+  
+  .gap-3 {
+    gap: 0.75rem; /* Tailwind's gap-3 */
+  }
+  
+  nav {
+    /* margin-top: 48px; */
+  }
+
+  nav li {
+    list-style-type: none;
+  }
+
+  nav li a {
+    text-decoration: none;
+  }
+  
+  .space-y-4 > * + * {
+    margin-top: 1rem; /* Space between items */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* Tailwind's text-xl */
+  }
+  
+  .text-sm {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+  }
+  
+  .text-slate-500 {
+    color: #64748b; /* Tailwind's slate-500 */
+  }
+  
+  /* Dark mode styles */
+  .dark .responsive-menu {
+    background-color: #1f2937; /* dark:bg-gray-900 */
+    color: white;
+  }
+  
