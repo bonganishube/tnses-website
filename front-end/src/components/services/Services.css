@@ -1,224 +1,85 @@
+.services-section {
+  background-color: white;
+}
 
 .services-container {
-    background-color: #f7fafc;
-    color: #1A202C;
-    padding: 3rem 1rem;
-  }
+  padding: 7rem 1rem 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .dark .services-container {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
-  }
-  
-  .services-container .container {
-    margin: 0 auto;
-  }
-  
-  /* Header */
-  .header {
-    text-align: center;
-    padding-bottom: 3rem;
-  }
-  
-  .header-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #172243;
-  }
+.services-container h2, 
+.services-container p {
+  text-align: center;
+}
 
-  .dark .header-title {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
-  }
-  
-  .header-description {
-    color: #4a5568;
-    font-family: 'Marcellus';
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
+.services-container h2, 
+.services-container p > * {
+  margin-bottom: 1.25rem;  /* adds space between child elements */
+}
 
-  .dark .header-description {
-    background-color: var(--bg-color);
-    color: rgba(250, 250, 250, 0.7);
-    transition: var(--transition);
-  }
-  
-  /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default responsive grid */
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  
-  /* Service Card */
-  .service-card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
+.services-container h2, 
+.services-container p > *:last-child {
+  margin-bottom: 0;  /* removes the extra margin from the last child */
+}
 
-  .dark .service-card {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
-    border: 1.4px solid rgba(50, 50, 50, 0.7); 
-    border-radius: 0.7rem;
-    box-shadow: 0 4px 10px rgba(20, 20, 20, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service-icon {
-    font-size: 3rem;
-    color: #ff6100;
-  }
-  
-  .service-title {
-    font-family: 'Marcellus';
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #2d3748;
-    margin-top: 1rem;
-  }
+.service-category {
+  padding: 3rem 0 3rem 0;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .dark .service-title {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
-  }
-  
-  .service-description {
-    color: #4a5568;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.2px;
-    line-height: 22px;
-    margin-top: 0.5rem;
-  }
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
 
-  .dark .service-description {
-    background-color: var(--bg-color);
-    color: rgba(250, 250, 250, 0.7);
-    transition: var(--transition);
-  }
-  
-  /* Button */
-  .button-container {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .primary-btn {
-    background-color: #ff6100;
-    color: white;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .primary-btn:hover {
-    background-color: #9b56b6;
-  }
-  
-  .primary-btn:focus {
-    outline: none;
-  }
-  
-  /* Subtle "Learn More" Button for each service */
-  .subtle-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #ff6100;
-    font-size: 0.9rem;
-    font-weight: 300;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s, color 0.3s;
-    letter-spacing: 0.7px;
-  }
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
 
-  .dark .subtle-btn {
-    color: rgba(250, 250, 250, 0.7);
+.react-tabs__tab-list {
+  border-bottom: 1px solid #FF6100;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  background-color: white;
+  display: inline-block;
+  /* border: 1px solid transparent; */
+  /* border-bottom: none; */
+  /* bottom: -1px; */
+  position: relative;
+  list-style: none;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  border: 1px solid #FF6100 !important;
+  color: black;
+  border-radius: 5px;
+  outline: none;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .service-category {
+    width: 80%;
   }
-  
-  .subtle-btn:hover {
-    background-color: #ff6100;
-    color: white;
+  .tab-list {
+    gap: 2rem;
   }
-  
-  .subtle-btn:focus {
-    outline: none;
-  }
-  
-  /* Responsive Styles for max-width 1280px */
-  @media (max-width: 1280px) {
-    .header-title {
-      font-size: 1.75rem;
-    }
-  
-    .services-grid {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust the column width */
-    }
-  
-    .service-card {
-      padding: 1.25rem; /* Slightly reduce padding for smaller screens */
-    }
-  
-    .service-icon {
-      font-size: 2.5rem; /* Smaller icons for medium-sized screens */
-    }
-  
-    .service-title {
-      font-size: 1.125rem; /* Slightly smaller titles for smaller screens */
-    }
-  
-    .service-description {
-      font-size: 0.95rem; /* Adjust font size for description */
-    }
-  
-    .primary-btn {
-      padding: 0.75rem 1.5rem; /* Adjust button padding */
-      font-size: 0.95rem; /* Adjust button font size */
-    }
-  }
-  
-  /* Further adjustments for smaller screens (e.g., mobile devices) */
-  @media (max-width: 768px) {
-    .services-grid {
-      grid-template-columns: 1fr; /* Stack services into one column */
-    }
-  
-    .service-icon {
-      font-size: 2rem; /* Even smaller icons for mobile */
-    }
-  
-    .service-title {
-      font-size: 1rem; /* Smaller titles for mobile */
-    }
-  
-    .service-description {
-      font-size: 0.875rem; /* Smaller description text */
-    }
-  
-    .primary-btn {
-      padding: 0.75rem 1.25rem; /* Adjust button padding */
-      font-size: 0.875rem; /* Adjust button font size */
-    }
-  }
-  
+}
