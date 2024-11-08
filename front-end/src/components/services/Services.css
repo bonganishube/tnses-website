@@ -1,5 +1,5 @@
 .services-section {
-  background-color: #F7F8FC;
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
 }
@@ -111,7 +111,7 @@
 }
 
 .service-info {
-  background-color: var(--bg-color);
+  background-color: #F7F8FC;
   border-radius: 1rem;
   padding: 2rem 2.6rem; 
   text-align: left;
@@ -119,6 +119,7 @@
 
 .dark .service-info {
   border: 1px solid #FF6100;
+  background-color: black;
 }
 
 .dark .service-image {
