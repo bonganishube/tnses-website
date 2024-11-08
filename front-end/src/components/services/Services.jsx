@@ -39,11 +39,11 @@ const Services = () => {
                     <h4>
                       Benefits
                     </h4>
-                    <ul>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                    </ul>
+                    <div className='service-list'>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                    </div>
                     <a className='service-link'>
                       Register Now
                     </a>
@@ -63,11 +63,11 @@ const Services = () => {
                     <h4>
                       Benefits
                     </h4>
-                    <ul>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                    </ul>
+                    <div className='service-list'>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                    </div>
                     <a className='service-link'>
                       Register Now
                     </a>
@@ -87,11 +87,11 @@ const Services = () => {
                     <h4>
                       Benefits
                     </h4>
-                    <ul>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                      <li>Lorem Ipsum is simply dummy text</li>
-                    </ul>
+                    <div className='service-list'>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                    </div>
                     <a className='service-link'>
                       Register Now
                     </a>

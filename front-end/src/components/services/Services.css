@@ -12,7 +12,7 @@
 
 .services-container {
   width: 100%;
-  padding: 4rem 1rem 0 1rem;
+  padding: 2rem 1rem 0 1rem;
 }
 
 .services-info {
@@ -151,9 +151,7 @@
   margin-bottom: 0;
 }
 
-.service-info ul {
-  list-style: none;
-  padding-left: 1.25rem;
+.service-list {
   margin-top: 0;
   font-size: 0.9rem;
   font-weight: 300;
@@ -169,7 +167,7 @@
   text-decoration-color: #FF6100;
   cursor: pointer;
   transition: all 0.3s ease;
-
+  margin-top: 1rem; 
 }
 
 .service-image {
@@ -182,7 +180,7 @@
 
 @media only screen and (max-width: 480px) {
   .services-container {
-    padding: 2.5rem 1rem 0 1rem;
+    padding: 2rem 1rem 0 1rem;
   }
   .services-info h2 {
     font-size: 1.3rem;
@@ -195,11 +193,11 @@
   }
   .tab-list .tab-one {
     display: inline-block;
-    margin: 1rem 1rem 1rem 0.25rem;
+    margin: 1rem 1rem 0.25rem 1rem;
   }
   .tab-list .tab-two, .tab-three {
     display: inline-block;
-    margin: 0 auto;
+    margin: 1rem 1rem 1rem 0.25rem;
   }
   .service-info {
     text-align: center;
@@ -223,10 +221,11 @@
     margin-bottom: 0.2rem;
   }
   
-  .service-info ul {
+  .service-list {
     margin-top: 0.1rem;
+    margin-bottom: 1rem;
     font-size: 0.8rem;
-    text-align: left;
+    text-align: center;
   }
 }
 
