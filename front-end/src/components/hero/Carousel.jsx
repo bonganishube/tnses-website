@@ -56,7 +56,7 @@ const Carousel = () => {
     {
       text: "Third slide",
       label: "Third slide label",
-      description: "Registration closes 30 November 2024.",
+      description: "Registration closes 30 Nov 2024.",
       image: readiness,
     },
   ];
