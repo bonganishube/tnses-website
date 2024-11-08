@@ -247,7 +247,7 @@ span {
 
   @media only screen and (max-width: 480px) {
     .carousel-container {
-      min-height: 70vh;
+      min-height: 77vh;
     }
 
     .carousel-image-mobile::before {
@@ -281,7 +281,6 @@ span {
     object-position: center center;
 
   }
-
     .carousel-image img {
       display: none;
     }

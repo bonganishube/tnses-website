@@ -3,7 +3,7 @@
 }
 
 .dark .brands {
-    background-color: #172243;
+    background-color: var(--bg-color);
     color: var(--text-color);
     transition: var(--transition);
 }
@@ -27,7 +27,7 @@
 
 @media only screen and (max-width: 480px) {
     .brands {
-        padding: 1.3rem;  
+        /* padding: 1.3rem;   */
         height: 7.5rem;
     }
     .brands h1 {
