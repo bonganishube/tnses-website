@@ -374,7 +374,7 @@ span {
     } 
   
     .carousel-caption {
-      font-size: 1rem; /* Make the text smaller */
+      font-size: 1.5rem; /* Make the text smaller */
       width: 90%; /* Make the caption width more flexible */
     }
   
@@ -389,7 +389,7 @@ span {
       font-weight: 500;
       letter-spacing: 1.3px;
       border-radius: 8px;
-      padding: 6px 12px;
+      padding: 8px 14px;
       margin: 0 7px;
     }
     .carousel-caption button img {
