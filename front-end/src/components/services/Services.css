@@ -1,11 +1,11 @@
 .services-section {
-  background-color: var(--bg-color);
+  background-color: #f3f3f3;
   display: flex;
   justify-content: center;
 }
 
 .dark .services-section {
-  background-color: var(--bg-color);
+  background-color: #172243;
   color: var(--text-color);
   transition: var(--transition);
 }
@@ -61,6 +61,11 @@
 
 .tab-list {
   margin-bottom: 3rem;
+  color: #172243
+}
+
+.dark .tab-list {
+  color: white;
 }
 
 .tab-list .tab-one, .tab-two, .tab-three {
@@ -111,15 +116,16 @@
 }
 
 .service-info {
-  background-color: #F7F8FC;
-  border-radius: 1rem;
+  background-color: #f3f3f3;
+  border: 1px solid #FF6100;
+  border-radius: 5px;
   padding: 2rem 2.6rem; 
   text-align: left;
 }
 
 .dark .service-info {
+  background-color: #172243;
   border: 1px solid #FF6100;
-  background-color: black;
 }
 
 .dark .service-image {
@@ -137,7 +143,7 @@
 }
 
 .dark .service-info h3 {
-  color: #FF6100;
+  color: white;
 }
 
 .service-info p {
@@ -147,11 +153,19 @@
   line-height: 1.2rem;
 }
 
+.dark .service-info p{
+  color:#ececec
+}
+
 .service-info h4 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-color);
+  color:#172243;
   margin-bottom: 0;
+}
+
+.dark .service-info h4 {
+  color: white
 }
 
 .service-list {
@@ -176,7 +190,7 @@
 .service-image {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 5px;
   object-fit: cover;
 }
 
@@ -225,9 +239,12 @@
   
   .service-info h4 {
     font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-color);
+    font-weight: 600;
+    color:#172243;
     margin-bottom: 0.2rem;
+  }
+  .dark .service-info h4 {
+    color: white
   }
   
   .service-list {
@@ -254,9 +271,12 @@
   
   .service-info h4 {
     font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-color);
+    font-weight: 600;
+    color:#172243;
     margin-bottom: 0.2rem;
+  }
+  .dark .service-info h4 {
+    color: white
   }
   
   .service-info ul {
