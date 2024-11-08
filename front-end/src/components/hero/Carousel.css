@@ -295,6 +295,7 @@ span {
     .carousel-control-prev,
     .carousel-control-next {
       font-size: 1rem; /* Make buttons even smaller */
+      display: none;
     }
     .g-one {
       color: #4285F4;
