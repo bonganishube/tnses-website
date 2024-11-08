@@ -62,7 +62,7 @@
     width: 80%; /* Adjust width to make caption fit better */
     max-width: 600px; /* Prevent it from getting too wide */
     font-family: 'Marcellus', sans-serif;
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.6rem; /* Adjust font size */
     line-height: 1.4;
     z-index: 2;
   }
@@ -233,7 +233,7 @@ span {
     margin: 0 7px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 1.5px;
     display: inline-flex;
@@ -285,9 +285,9 @@ span {
       display: none;
     }
     .carousel-caption {
-      font-size: 0.9rem; /* Even smaller caption text */
-      width: 75%; /* Ensure it doesn't overflow */
-      height: 35%;
+      font-size: 1rem; /* Even smaller caption text */
+      width: 85%; /* Ensure it doesn't overflow */
+      height: 45%;
       padding:7px;
       padding-top: 15px;
       bottom: 15%;
@@ -346,7 +346,7 @@ span {
       font-weight: 400;
     }
     .carousel-caption button {
-      font-size: 0.6rem;
+      font-size: 0.75rem;
       font-weight: 500;
       letter-spacing: 1.3px;
       border-radius: 8px;
@@ -384,7 +384,7 @@ span {
       padding: 8px; /* Reduce button padding */
     }
     .carousel-caption button {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 500;
       letter-spacing: 1.3px;
       border-radius: 8px;
