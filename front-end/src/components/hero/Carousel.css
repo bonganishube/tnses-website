@@ -87,6 +87,7 @@
   
   .carousel-control-prev,
   .carousel-control-next {
+    display: none;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
     border: none;
