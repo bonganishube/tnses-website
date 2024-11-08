@@ -286,9 +286,9 @@ span {
       display: none;
     }
     .carousel-caption {
-      font-size: 1rem; /* Even smaller caption text */
-      width: 85%; /* Ensure it doesn't overflow */
-      height: 45%;
+      font-size: 1.07rem; /* Even smaller caption text */
+      width: 87%; /* Ensure it doesn't overflow */
+      height: 50%;
       padding:7px;
       padding-top: 15px;
       bottom: 15%;
@@ -351,8 +351,8 @@ span {
       font-weight: 500;
       letter-spacing: 1.3px;
       border-radius: 8px;
-      padding: 5px 10px;
-      margin: 0 7px;
+      padding: 6px 11px;
+      margin: 8px 7px;
     }
     .carousel-caption button img {
       width: 13px;
