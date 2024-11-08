@@ -3,7 +3,7 @@
 }
 
 .dark .brands {
-    background-color: var(--bg-color);
+    background-color: #172243;
     color: var(--text-color);
     transition: var(--transition);
 }
