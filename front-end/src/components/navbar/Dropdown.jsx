@@ -5,7 +5,7 @@ export const Dropdown = ({ isOpen, closeDropdown }) => {
     const ServiceDropdown = [
         { id: 1, name: "Google for Education", link: "./#google-for-education" },
         { id: 2, name: "Blueprint", link: "./#blueprint" },
-        { id: 3, name: "Service three", link: "./#service-three" }
+        { id: 3, name: "Mentorship", link: "./#mentorship" }
     ];
 
     return (
