@@ -246,7 +246,7 @@ span {
     margin-left: 9px;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     .carousel-container {
       height: 60vh;
     }
@@ -286,8 +286,8 @@ span {
       display: none;
     }
     .carousel-caption {
-      font-size: 1.07rem; /* Even smaller caption text */
-      width: 87%; /* Ensure it doesn't overflow */
+      font-size: 1.07rem; 
+      width: 87%; 
       height: 50%;
       padding:7px;
       padding-top: 15px;
@@ -295,7 +295,7 @@ span {
     }
     .carousel-control-prev,
     .carousel-control-next {
-      font-size: 1rem; /* Make buttons even smaller */
+      font-size: 1rem; 
       display: none;
     }
     .g-one {
@@ -360,8 +360,7 @@ span {
     }
   }
   
-  /* Responsive Design for smaller screens */
-  @media only screen and (min-width: 480px) and (max-width: 768px) {  
+  /* @media only screen and (min-width: 480px) and (max-width: 768px) {  
     .carousel-container {
       height: 500px;
     }
@@ -374,15 +373,14 @@ span {
     } 
   
     .carousel-caption {
-      font-size: 1.5rem; /* Make the text smaller */
-      width: 90%; /* Make the caption width more flexible */
+      font-size: 1.5rem; 
+      width: 90%; 
     }
   
-    /* Make navigation buttons smaller on mobile */
     .carousel-control-prev,
     .carousel-control-next {
-      font-size: 1.8rem; /* Slightly smaller arrows */
-      padding: 8px; /* Reduce button padding */
+      font-size: 1.8rem; 
+      padding: 8px;
     }
     .carousel-caption button {
       font-size: 0.8rem;
@@ -396,7 +394,7 @@ span {
       width: 15px;
       margin-left: 6px;
     }
-  }
+  } */
 
   @media only screen and (min-width: 768px) {
     .carousel-image-mobile img {

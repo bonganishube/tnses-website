@@ -13,8 +13,6 @@
 
 .navbar-container {
     box-sizing: border-box;
-    /* max-width: 1280px; */
-    width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
     margin: 1.25rem;
     padding: 0 4rem 0 2rem;
@@ -144,11 +142,11 @@ nav .buttons {
 
 
 @media only screen and (max-width: 480px) {
-    /* .desktop-view {
+    .desktop-view {
       display: none;
-    } */
+    }
     .navbar-container {
-      /* max-width: 480px; */
+      width: 100%;
       border-radius: 8px;
       padding-left: 1.3rem;
     }
@@ -175,12 +173,18 @@ nav .buttons {
 }
 
 @media only screen and (max-width: 767px) {
+  .navbar-container {
+    width: 100%;
+  }
   .desktop-view {
     display: none;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+    .navbar-container {
+      width: 100%;
+    }
     .nav-links {
       margin-left: 2rem;
     }
@@ -204,10 +208,22 @@ nav .buttons {
   }
 
 @media only screen and (min-width: 768px) {
+    .navbar-container {
+      width: 100%;
+    }
     .mobile-view {
       display: none;
     }
-    
+}
+
+@media only screen and (min-width: 1280px) {
+    .navbar-container {
+      max-width: 1300px;
+      margin: 1.25rem 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 2rem 0 2rem;
+    }
 }
   
   
