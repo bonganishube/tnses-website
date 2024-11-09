@@ -216,9 +216,9 @@ nav .buttons {
     }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1300px) {
     .navbar-container {
-      max-width: 1300px;
+      max-width: 1280px;
       margin: 1.25rem 0;
       left: 50%;
       transform: translateX(-50%);
