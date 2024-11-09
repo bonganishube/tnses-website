@@ -44,19 +44,19 @@ const Carousel = () => {
     {
       text: "First slide",
       label: "Google for Education",
-      description: "Registration is open! Sign up today.",
+      description: "Registration is open!",
       image: googleEducation, // Directly use the imported image
     },
     {
       text: "Second slide",
       label: "Second slide label",
-      description: "Build your digital skills and be ahead.",
+      description: "Build your digital skills.",
       image: blueprint,
     },
     {
       text: "Third slide",
       label: "Third slide label",
-      description: "Registration closes 30 Nov 2024.",
+      description: "Register before 30 Nov.",
       image: readiness,
     },
   ];
