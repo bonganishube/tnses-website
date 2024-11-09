@@ -62,7 +62,7 @@
     width: 80%; /* Adjust width to make caption fit better */
     max-width: 600px; /* Prevent it from getting too wide */
     font-family: 'Marcellus', sans-serif;
-    font-size: 1.6rem; /* Adjust font size */
+    font-size: 1.9rem; /* Adjust font size */
     line-height: 1.4;
     z-index: 2;
   }
@@ -286,10 +286,10 @@ span {
       display: none;
     }
     .carousel-caption {
-      font-size: 1.07rem; 
-      width: 87%; 
+      font-size: 1.3rem; 
+      width: 88%; 
       height: 50%;
-      padding:7px;
+      padding: 10px;
       padding-top: 15px;
       bottom: 15%;
     }
