@@ -120,12 +120,10 @@
 
 .service-info {
   background-color: #f3f3f3;
-  /* border: 2px solid #FF6100; */
   border-radius: 5px;
-  padding: 2rem 2.6rem; 
+  padding: 2rem 2rem; 
   text-align: left;
 }
-
 
 .dark .service-info {
   background-color: rgb(5, 5, 5);
@@ -224,6 +222,11 @@
     display: inline-block;
     margin: 1rem 1rem 1rem 0.25rem;
   }
+
+  .service-tab {
+    gap: 0.85rem;
+  }
+
   .service-info {
     text-align: center;
     padding-top: 1.6rem;
