@@ -50,7 +50,7 @@ const Carousel = () => {
     {
       text: "Second slide",
       label: "Second slide label",
-      description: "Build your digital skills.",
+      description: "Build your digital skills and be ahead.",
       image: blueprint,
     },
     {
