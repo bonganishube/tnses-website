@@ -6,7 +6,7 @@
 }
 
 .dark .navbar-container {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
   color: var(--text-color);
   transition: var(--transition);
 }
