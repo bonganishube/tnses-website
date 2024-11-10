@@ -227,7 +227,7 @@ span {
 
   .carousel-caption button {
     color: black;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: white;
     border: 2px solid transparent;
     border-radius: 5px;
     padding: 8px 16px;
@@ -405,7 +405,7 @@ span {
 
   @media only screen and (min-width: 1280px) {
     .carousel-container {
-      height: 650px;
+      height: 70%;
     }
   }
   
