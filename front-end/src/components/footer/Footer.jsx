@@ -1,94 +1,82 @@
 import React from "react";
-import "./footer.css";
+import "./Footer.css";
+import Logo from '../../assets/logo.png';
 
 const Footer = () => {
-  // Footer data directly included inside the component
-  const footer = [
-    {
-      title: "LAYOUTS",
-      text: [
-        { list: "Home Page" },
-        { list: "About Page" },
-        { list: "Service Page" },
-        { list: "Property Page" },
-        { list: "Contact Page" },
-        { list: "Single Blog" },
-      ],
-    },
-    {
-      title: "ALL SECTIONS",
-      text: [
-        { list: "Headers" },
-        { list: "Features" },
-        { list: "Attractive" },
-        { list: "Testimonials" },
-        { list: "Videos" },
-        { list: "Footers" },
-      ],
-    },
-    {
-      title: "COMPANY",
-      text: [
-        { list: "About" },
-        { list: "Blog" },
-        { list: "Pricing" },
-        { list: "Affiliate" },
-        { list: "Login" },
-        { list: "Changelog" },
-      ],
-    },
-  ];
-
   return (
-    <>
-      <section className="footerContact">
-        <div className="container">
-          <div className="send flex">
-            <div className="text">
-              <h1>Do You Have Questions?</h1>
-              <p>We'll help you to grow your career and growth.</p>
-            </div>
-            <button className="btn5">Contact Us Today</button>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div className="container">
-          <div className="box">
-            <div className="logo">
-              <img src="../images/logo-light.png" alt="Logo" />
-              <h2>Do You Need Help With Anything?</h2>
-              <p>
-                Receive updates, hot deals, tutorials, and discounts sent straight
-                to your inbox every month.
-              </p>
-
-              <div className="input flex">
-                <input type="text" placeholder="Email Address" />
-                <button>Subscribe</button>
+    <footer>
+      <div className='footer-container'>
+        <div className='row'>
+          <div className='footer-col'>
+            <div className='about-us'>
+              <div className='footer-logo'>
+                <img 
+                  src={Logo}
+                  alt='Logo'
+                />
+                <h1>TNSES</h1>
               </div>
+              <h4 className='newsletter-heading'>
+                Subscribe to our newsletter
+              </h4>
+              <p className='newsletter-paragraph'>
+                Receive updates, tutorials, discounts sent straight in your inbox every month.
+              </p>
+              <form action=''>
+                <input type='email' placeholder='Email' className='input-email'></input>
+                <input type='submit' value='Submit' className='input-submit'></input>
+              </form>
             </div>
           </div>
 
-          {footer.map((val, index) => (
-            <div className="box" key={index}>
-              <h3>{val.title}</h3>
-              <ul>
-                {val.text.map((items, idx) => (
-                  <li key={idx}>{items.list}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* 2nd Column */}
+          <div className='footer-col'>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href=''>Home</a></li>
+              <li><a href=''>About</a></li>
+              <li><a href=''>Contact</a></li>
+              <li><a href=''>Team</a></li>
+            </ul>
+          </div>
+
+          {/* 3rd Column */}
+          <div className='footer-col'>
+            <h4>Services</h4>
+            <ul>
+              <li><a href=''>Google for Education</a></li>
+              <li><a href=''>Blueprint</a></li>
+              <li><a href=''>Mentorship</a></li>
+            </ul>
+          </div>
+
+          {/* 4th Column */}
+          <div className='footer-col'>
+            <h4>Contact</h4>
+            <ul className='contact-icons'>
+              <li><i className="fa-solid fa-location-dot"></i>Belhar, Pentech, Cape Town, Western Cape 7493</li>
+              <li><i className="fa-solid fa-envelope"></i><a href = 'mailto:info@tnses.org'>info@tnses.org</a></li>
+              <li><i className="fa-solid fa-phone"></i>+27 12 345 67-89</li>
+            </ul>
+          </div>
         </div>
-      </footer>
 
-      <div className="legal">
-        <span>© 2021 RentUP. Designed By GorkCoder.</span>
+        <hr></hr>
+          <div className='copyright'>
+            <p>
+              &#169; 2024 TNSES. All Rights Reserved.
+            </p>
+          </div>
+
+          <div className='social-icons'>
+              <a href=''><i className='fab brands fa-facebook'></i></a>
+              <a href=''><i className='fab brands fa-instagram'></i></a>
+              <a href=''><i className='fab brands fa-twitter'></i></a>
+              <a href=''><i className='fab brands fa-youtube'></i></a>
+            </div>
       </div>
-    </>
-  );
-};
+    </footer>
+  )
+}
 
-export default Footer;
+export default Footer
