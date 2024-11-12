@@ -11,7 +11,7 @@
     padding: 3rem 1rem;
     margin: 0 auto;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     gap: 2rem;
 }
@@ -22,35 +22,128 @@
 }
 
 .thumbnail-container {
-    
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .thumbnail {
     width: 100%;
-    height: 10rem;
-    border-radius: 5px;
+    height: 100%;
     object-fit: cover;
-    display: block;
+}
+
+.ioplay {
+    color: white;
+    font-size: 3rem;
+}
+
+.ioplay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.ioplay-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.iframe {
+    border-radius: 5px;
+}
+
+.video-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 }
 
 .about-right {
     width: 100%;
 }
 
+.about-right h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.375;
+}
+
+.about-right p {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.about-right button {
+    background-color: #FF6100;
+    color: white;
+    padding: 0.875rem 2rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-right-button {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
 
 @media only screen and (max-width: 768px) {
     .about-content {
-        width: 80%;
         flex-direction: column;
+        width: 90%;
     }
+
     .about-left {
-        width: 50%;
-        margin-bottom: 0;
+        width: 100%;
+        margin-bottom: 2rem;
     }
+
     .thumbnail {
-        height: 446px;
+        height: 250px;
     }
+
     .about-right {
-        width: 50%;
+        width: 100%;
     }
 }
