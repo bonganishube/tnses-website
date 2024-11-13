@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+section {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #172243;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+}
+
+.contact-container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+}
+
+
+
+.input-box {
+    width: 50%;
+}
+
+.input-box-message {
+    width: 100%
+}
+
