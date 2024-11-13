@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
@@ -9,183 +10,185 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #172243;
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 40%;
-    background-color: blue;
+    min-height: 40vh;
+    background-color: #e8eff2; /* Soft background color */
 }
 
 .contact-container {
-    position: relative;
-    min-width: 1100px;
-    min-height: 550px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
-    position: absolute;
-    top: 40px;
-    width: 350px;
-    height: calc(100% - 80px);
-    background-color: darkblue;
-    z-index: 1;
+    background-color: #3e4e5e; /* Darker shade for the contact info section */
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
     padding: 40px;
+    border-radius: 8px 0 0 8px;
+    width: 350px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-info:hover {
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15); /* Hover effect to give a sense of depth */
+}
+
+.contact-info h4 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.contact-info .contact-icons li {
+    margin-bottom: 18px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    font-size: 18px;
 }
 
-.contact-info h2 { 
-    color: white;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.contact-info .info {
-    margin: 20px 0;
-}
-
-.contact-info .info li {
-    list-style: none;
-    display: flex;
-    margin: 20px 0;
-    align-items: flex-start;
-}
-
-.contact-info li span:nth-child(1) {
-    width: 30px;
-    min-width: 30px;
-}
-
-.contact-info li span:nth-child(1) i {
-    max-width: 100%;
-    filter: invert(1);
-    opacity: 0.5;
-}
-
-.contact-info li span:nth-child(2) {
-    color: white;
-    margin-left: 10px;
-    font-weight: 300;
-    opacity: 0.5;
+.contact-info .contact-icons i {
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .sci {
-    position: relative;
     display: flex;
-}
-
-.sci li {
-    list-style: none;
-    margin-right: 15px;
-}
-
-.sci li a {
-    text-decoration: none;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 .sci li a i {
-    filter: invert(1);
-    opacity: 0.5;
+    color: #fff;
+    font-size: 22px;
+    transition: color 0.3s ease;
 }
 
-.sci li:hover a i {
-    opacity: 1;
-}  
+.sci li a:hover i {
+    color: #3a8dff; /* Elegant hover effect on social icons */
+}
 
 .contact-form {
-    position: absolute;
-    padding: 70px 50px;
-    background: white;
-    margin-left: 150px;
-    width: calc(100% - 150px);
-    height: 100%;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    padding: 50px 40px;
+    width: calc(100% - 370px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 0 8px 8px 0;
+    position: relative;
 }
 
 .contact-form h2 {
-    color: black;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.contact-form .form-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 30px;
-}
-
-.contact-form .form-box .input-box {
-    position: relative;
-    margin: 0 0 35px 0;
-}
-
-.contact-form .form-box .input-box .w50 {
-    width: 47%;
-}
-
-.contact-form .form-box .input-box .w100 {
-    width: 100%;
-}
-
-.contact-form .form-box .input-box input,
-.contact-form .form-box .input-box textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
+    font-size: 28px;
+    font-weight: 600;
     color: #333;
+    margin-bottom: 25px;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    width: 47%;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.input-box.w100 {
+    width: 100%;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #555;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
     outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.contact-form .form-box .input-box input:focus,
-.contact-form .form-box .input-box textarea:focus {
+.input-box input:focus,
+.input-box textarea:focus {
     border-color: #3a8dff;
+    background-color: #eaf2fe;
 }
 
-.contact-form .form-box .input-box textarea {
-    min-height: 120px;
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #bbb;
 }
 
-.contact-form .form-box .input-box span {
+.input-box span {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 15px;
     transform: translateY(-50%);
+    color: #888;
     font-size: 16px;
-    color: #333;
+    transition: all 0.3s ease;
     pointer-events: none;
-    transition: 0.3s;
 }
 
-.contact-form .form-box .input-box input:focus ~ span,
-.contact-form .form-box .input-box textarea:focus ~ span {
+.input-box input:focus ~ span,
+.input-box textarea:focus ~ span {
     top: 0;
     font-size: 12px;
     color: #3a8dff;
 }
 
-.contact-form .form-box .input-box input[type='submit'] {
-    cursor: pointer;
-    background-color: darkblue;
+.input-box input[type='submit'] {
+    background-color: #3a8dff;
     color: white;
+    padding: 15px 30px;
     border: none;
-    max-width: 150px;
-    padding: 12px;
     border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
-.contact-form .form-box .input-box input[type='submit']:hover {
-    background-color: #3a8dff;
+.input-box input[type='submit']:hover {
+    background-color: #3578e5; /* Darker blue for submit button hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 40px;
+        border-radius: 8px;
+    }
+
+    .contact-form {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .input-box.w50 {
+        width: 100%;
+    }
+
+    .contact-info h4 {
+        font-size: 22px;
+    }
 }

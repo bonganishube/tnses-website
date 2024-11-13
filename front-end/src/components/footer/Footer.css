@@ -9,52 +9,54 @@
 }
 
 footer .row {
-  display: flex;
-  justify-content: space-between;
+  display: grid; /* Use CSS Grid instead of Flexbox */
+  grid-template-columns: 60% 20% 20%; /* Define three columns, with the first taking 50% width and others taking 25% each */
+  gap: 2rem; /* Optional: adds space between the grid items */
   padding: 40px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about-us {
-  width: 25rem;
+.footer-col {
+  display: flex; /* Make sure the content inside each column is arranged with Flexbox (optional) */
+  flex-direction: column;
 }
 
-.footer-logo {
+.newsletter {
+  width: 100%; /* Make the newsletter take up full width of its grid column */
   display: flex;
-  align-items: center;
-  width: 3rem;
-  text-align: left;
-  margin-bottom: 1rem;
- }
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 6rem 1.5rem 0; /* Optional: Add padding inside */
+  line-height: 1.5rem;
+}
 
- .footer-logo img {
-  width: 100%;
-  border-radius: 5px;
- }
-
- .footer-logo h1 {
+.newsletter h4 {
   color: white;
-  font-size: 1.4rem;
-  font-family: 'Marcellus', sans-serif;
-  margin-left: 0.5rem;
-  margin-top: 0.35rem;
- }
-
-.newsletter-heading {
-  color: white;
-  font-weight: 600;
-  width: 20rem;
+  font-size: 1.375rem;
+  position: relative;
+  text-align: start;
   margin-bottom: 1rem;
 }
 
-.newsletter-paragraph {
-  color:white;
-  width: 25rem;
+.newsletter h4::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 2px; 
+  bottom: -10px;
+  background-color: #FF6100;
 }
 
-footer form {
-  display: flex;
+.newsletter p {
+  color: white;
+  opacity: 0.7;
   width: 100%;
-  gap: 10px;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 0.625rem;
 }
 
 .input-email {
@@ -62,7 +64,6 @@ footer form {
   border-radius: 5px;
   width: 70%;
   height: 2.8rem;
-  display: block;
   padding-left: 20px;
   margin: 1rem 0;
 }
@@ -78,28 +79,29 @@ footer form {
   color: white;
 }
 
-.footer-col h4 {
+.footer-col .quick-links h4,
+.footer-col .services h4 {
   color: white;
   margin-bottom: 25px;
-  font-size: 22px;
+  font-size: 1rem;
   position: relative;
   text-align: start;
 }
 
-.footer-col h4::before {
+.quick-links h4::before,
+.services h4::before {
   content: '';
-  width: 70px;
-  height: 2px;
   position: absolute;
-  background-color: #FF6100;
+  width: 50px;
+  height: 2px; 
   bottom: -10px;
+  background-color: #FF6100;
 }
 
 .footer-col p {
   text-align: left;
   color: white;
 }
-
 
 .footer-col ul {
   list-style: none;
@@ -113,7 +115,8 @@ footer form {
 .footer-col ul li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 100;
   opacity: 0.7;
   transition: 0.5s;
 }
@@ -122,86 +125,62 @@ footer form {
   opacity: 1;
 }
 
-.col p{ 
-  color: white;
-}
-
 .row hr {
   opacity: 0.7;
 }
 
-.copyright-social-icons {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 100px;
-  align-items: center;
-}
-
 .copyright {
   color: white;
-  font-weight: 200;
-  padding: 1.5rem; 
-  padding-bottom: 1rem;
+  font-weight: 100;
+  padding: 1.5rem;
 }
 
-.contact-icons {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.contact-icons li {
-  color: white;
-  opacity: 0.7;
-}
-
-.contact-icons li i {
-  padding-right: 1rem; 
-  margin-bottom: 0.5rem;
-}
-
-.social-icons i {
-  display: inline-block;
-  color: white;
-  font-size: 1rem;
-  padding: 0.5rem;
-  padding-bottom: 2rem;
-  opacity: 0.7;
-  transition: 0.5s;
-}
-
-.social-icons i:hover {
-  opacity: 1;
-}
-.social-icons i:hover {
-  color:#FF6100;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   footer .row {
-    flex-direction: column;
-    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
   }
-  .footer-col h4 {
-    text-align: center;  
+  .footer-col {
+    display: block;
   }
+
+  .newsletter h4 {
+    text-align: center;
+  }
+
+  .footer-col .quick-links {
+    width: 100%;
+  }
+
+  .footer-col .services {
+    width: 100%;
+  }
+  /* .footer-col h4 {
+    text-align: center;
+  }
+
   .footer-col h4::before {
     left: 50%;
     transform: translateX(-50%);
   }
+
   footer .footer-col ul {
     margin-bottom: 20px;
   }
+
   .footer-col ul li {
     text-align: center;
   }
+
   .footer-col input {
     width: 100%;
   }
-  .copyright-social-icons {
-    flex-direction: column;
-    padding: 20px 30px;
-  }
+
   .social-icons i {
-    padding: 1rem; 
-  }
+    padding: 1rem;
+  } */
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  
 }
