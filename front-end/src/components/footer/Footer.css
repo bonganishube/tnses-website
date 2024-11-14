@@ -64,7 +64,7 @@
   margin: 1rem 0;
 }
 
-.input-submit {
+footer .input-submit {
   border: none;
   border-radius: 5px;
   width: 30%;
@@ -169,7 +169,7 @@ footer .services ul li a:hover {
     height: 2.3rem;
   }
   
-  .input-submit {
+  footer .input-submit {
     height: 2.3rem;
   }
 
@@ -235,7 +235,7 @@ footer .services ul li a:hover {
     height: 2.3rem;
   }
   
-  .input-submit {
+  footer .input-submit {
     height: 2.3rem;
   }
 
