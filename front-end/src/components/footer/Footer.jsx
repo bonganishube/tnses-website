@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer>
       <div className='footer-container'>
-        <div className='row'>
+        <div className='footer-row'>
 
           {/* 1st Column */}
-          <div className='footer-col'>
+         
             <div className='newsletter'>
               <h4>
                 Subscribe to our newsletter
@@ -21,10 +21,10 @@ const Footer = () => {
                 <input type='submit' value='Submit' className='input-submit'></input>
               </form>
             </div>
-          </div>
+        
 
           {/* 2nd Column */}
-          <div className='footer-col'>
+    
             <div className='quick-links'>
               <h4>Quick Links</h4>
               <ul>
@@ -34,10 +34,10 @@ const Footer = () => {
                 <li><a href=''>Team</a></li>
               </ul>
             </div>
-          </div>
+        
 
           {/* 3rd Column */}
-          <div className='footer-col'>
+      
             <div className='services'>
               <h4>Services</h4>
               <ul>
@@ -46,7 +46,7 @@ const Footer = () => {
                 <li><a href=''>Mentorship</a></li>
               </ul>
             </div>
-          </div>
+
         </div>
 
         <hr></hr>

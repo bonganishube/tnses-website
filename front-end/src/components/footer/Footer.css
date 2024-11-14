@@ -5,10 +5,11 @@
 }
 
 .footer-container {
+  justify-content: center;
   background-color: #172243;
 }
 
-footer .row {
+.footer-row {
   display: grid; /* Use CSS Grid instead of Flexbox */
   grid-template-columns: 60% 20% 20%; /* Define three columns, with the first taking 50% width and others taking 25% each */
   gap: 2rem; /* Optional: adds space between the grid items */
@@ -17,17 +18,12 @@ footer .row {
   margin: 0 auto;
 }
 
-.footer-col {
-  display: flex; /* Make sure the content inside each column is arranged with Flexbox (optional) */
-  flex-direction: column;
-}
-
 .newsletter {
   width: 100%; /* Make the newsletter take up full width of its grid column */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem 6rem 1.5rem 0; /* Optional: Add padding inside */
+  padding: 1.5rem 6rem 1.5rem 0; 
   line-height: 1.5rem;
 }
 
@@ -79,8 +75,8 @@ footer .row {
   color: white;
 }
 
-.footer-col .quick-links h4,
-.footer-col .services h4 {
+.quick-links h4,
+.services h4 {
   color: white;
   margin-bottom: 25px;
   font-size: 1rem;
@@ -98,30 +94,35 @@ footer .row {
   background-color: #FF6100;
 }
 
-.footer-col p {
+.newsletter p {
+  font-size: 0.9rem;
   text-align: left;
   color: white;
 }
 
-.footer-col ul {
+.quick-links ul,
+.services ul {
   list-style: none;
 }
 
-.footer-col ul li {
+.quick-links ul li, 
+.services ul li {
   padding: 10px 0;
   text-align: start;
 }
 
-.footer-col ul li a {
+.quick-links ul li a, 
+.services ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 100;
   opacity: 0.7;
   transition: 0.5s;
 }
 
-.footer-col ul li a:hover {
+.quick-links ul li a:hover, 
+.services ul li a:hover {
   opacity: 1;
 }
 
@@ -131,56 +132,151 @@ footer .row {
 
 .copyright {
   color: white;
+  font-size: 0.8rem;
   font-weight: 100;
   padding: 1.5rem;
+  text-align: center;
 }
 
-@media (max-width: 480px) {
-  footer .row {
-    display: flex;
+@media (max-width: 686px) {
+  .footer-row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 50px 50px;
+    row-gap: 3.5rem;
+    column-gap: 0;
     justify-content: center;
-  }
-  .footer-col {
-    display: block;
-  }
-
-  .newsletter h4 {
-    text-align: center;
+    justify-items: center;
+    padding: 5rem 4rem 4rem 4rem;
   }
 
-  .footer-col .quick-links {
+  .newsletter {
+    grid-column: 1 / span 2;
+    padding: 0;
+  }
+
+  .quick-links {
+    grid-column: 1 / span 2;
+  }
+
+  .services {
+    grid-column: 1 / span 2;
+  }
+
+  .newsletter p {
+    font-size: 0.9rem;
+  }
+
+  .input-email {
+    height: 2.3rem;
+  }
+  
+  .input-submit {
+    height: 2.3rem;
+  }
+
+  .quick-links,
+  .services {
+    align-items: center;
     width: 100%;
   }
 
-  .footer-col .services {
-    width: 100%;
-  }
-  /* .footer-col h4 {
-    text-align: center;
-  }
-
-  .footer-col h4::before {
-    left: 50%;
-    transform: translateX(-50%);
+  .quick-links ul,
+  .services ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
   }
 
-  footer .footer-col ul {
-    margin-bottom: 20px;
+  .quick-links h4,
+  .services h4 {
+    text-align: left;
+    font-size: 0.9rem;
   }
 
-  .footer-col ul li {
-    text-align: center;
+
+  .quick-links ul li, 
+  .services ul li {
+    text-align: left;
+    padding: 0.5rem;
   }
 
-  .footer-col input {
-    width: 100%;
+  .quick-links ul li a, 
+  .services ul li a {
+    font-size: 0.8rem;
   }
 
-  .social-icons i {
+  .copyright {
+    font-size: 0.8rem;
     padding: 1rem;
-  } */
+  }
+
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 687px) and (max-width: 937px) {
+  .footer-row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 50px;
+    row-gap: 4rem;
+    column-gap: 0;
+    justify-content: center;
+    justify-items: center;
+    padding: 5rem 4rem 4rem 4rem
+  }
+
+ .newsletter {
+    grid-column: 1 / span 2;
+    padding: 0;
+  }
+
+  .newsletter p {
+    font-size: 0.9rem;
+  }
+
+  .input-email {
+    height: 2.3rem;
+  }
   
+  .input-submit {
+    height: 2.3rem;
+  }
+
+  .quick-links,
+  .services {
+    align-items: center;
+    width: 100%;
+  }
+
+  .quick-links ul,
+  .services ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  }
+
+  .quick-links h4,
+  .services h4 {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+
+  .quick-links ul li, 
+  .services ul li {
+    text-align: left;
+    padding: 0.5rem;
+  }
+
+  .quick-links ul li a, 
+  .services ul li a {
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
 }
