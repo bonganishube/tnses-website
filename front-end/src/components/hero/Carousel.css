@@ -56,11 +56,11 @@
     text-align: left;
     color: white;
     background-color: rgba(50, 50, 50, 0.6); /* Semi-transparent background */
-    padding: 17px;
+    padding: 2rem;
     padding-top: 2px;
     border-radius: 5px; /* Optional: rounded corners for the caption */
-    width: 600px; /* Adjust width to make caption fit better */
-    height: 300px;
+    width: 500px; /* Adjust width to make caption fit better */
+    height: 200px;
     max-width: 600px; /* Prevent it from getting too wide */
     font-family: 'Marcellus', sans-serif;
     line-height: 1.4;
@@ -71,21 +71,19 @@
     content: '';
     position: absolute;
     width: 0.125rem;
-    height: 10rem; 
+    height: 12.5rem; 
     left: 0;
     background-color: #FF6100;
   }
 
   .carousel-caption h3 span {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-
+    font-size: 2rem;
   }
 
-  .carousel-caption p {
-    font-size: 1.5rem;
+  .carousel-caption p { 
+    font-size: 2rem;
+    margin-top: 1.2rem;
     margin-bottom: 1.5rem;
-
   }
 
   .dark .carousel-caption {
@@ -109,9 +107,8 @@
     align-items: center;
   }
 
-  .carousel-caption button img {
-    width: 18px;
-    margin-left: 9px;
+  .carousel-caption button .fa-arrow {
+    margin-left: 0.5rem;
   }
 
   
@@ -304,13 +301,30 @@
       display: none;
     }
     .carousel-caption {
-      font-size: 1.35rem; 
       width: 83%; 
-      height: 50%;
-      padding: 10px;
+      height: 200px;
+      padding: 1.5rem;
       padding-top: 15px;
-      bottom: 15%;
+      bottom: 30%;
     }
+
+    .carousel-caption h3 span {
+      font-size: 1.8rem;
+    }
+    .carousel-caption p { 
+      font-size: 1.6rem;
+    }
+
+    .carousel-caption::before {
+      content: '';
+      position: absolute;
+      width: 0.125rem;
+      height: 12.5rem; 
+      left: 0;
+      top: 0;
+      background-color: #FF6100;
+    }
+    
     .carousel-control-prev,
     .carousel-control-next {
       font-size: 1rem; 
@@ -370,19 +384,14 @@
       letter-spacing: 1.3px;
       border-radius: 5px;
       padding: 6px 11px;
-      margin: 8px 7px;
-    }
-    .carousel-caption button img {
-      width: 13px;
-      margin-left: 5px;
     }
   }
   
-  /* @media only screen and (min-width: 480px) and (max-width: 768px) {  
+  @media only screen and (min-width: 560px) and (max-width: 768px) {  
     .carousel-container {
-      height: 500px;
+      height: 600px;
     }
-    .carousel-image img {
+    /* .carousel-image img {
       object-position: center;
     }
 
@@ -411,8 +420,8 @@
     .carousel-caption button img {
       width: 15px;
       margin-left: 6px;
-    }
-  } */
+    } */
+  }
 
   @media only screen and (min-width: 768px) {
     .carousel-image-mobile img {

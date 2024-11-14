@@ -6,7 +6,7 @@ import readiness from '../../assets/carousel/readiness.jpg';
 import blueprintMobile from '../../assets/carousel/blueprint-mobile.jpg';
 import googleEducationMobile from '../../assets/carousel/google-education-mobile.jpg';
 import readinessMobile from '../../assets/carousel/readiness-mobile.jpg';
-import darkArrow from '../../assets/carousel/dark-arrow.png';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const CarouselImage = ({ imageSrc }) => {
@@ -44,19 +44,19 @@ const Carousel = () => {
     {
       text: "First slide",
       label: "Google for Education",
-      description: "Google for Education is a suite of tools and resources designed to help educators, students, and schools manage and enhance the learning experience.",
+      description: "Registration is open!",
       image: googleEducation, // Directly use the imported image
     },
     {
       text: "Second slide",
       label: "Second slide label",
-      description: "Google has developed various educational products to support digital learning, improve collaboration, and facilitate communication in educational settings.",
+      description: "Build your digital skills.",
       image: blueprint,
     },
     {
       text: "Third slide",
       label: "Third slide label",
-      description: "hese tools are used by millions of students and teachers around the world, from K–12 to higher education institutions.",
+      description: "Register before 30 Nov.",
       image: readiness,
     },
   ];
@@ -94,9 +94,8 @@ const Carousel = () => {
               <span className='for-education'> for Education</span>
              </h3>
             <p>{slides[activeIndex].description}</p>
-            <button>
-              Explore More 
-              {/* <img src={darkArrow} alt=''/> */}
+            <button>Explore More 
+              <FaArrowRightLong className='fa-arrow'/>
             </button>
           </div>
         </div>
