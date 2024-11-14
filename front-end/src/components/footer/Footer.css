@@ -76,7 +76,7 @@
 }
 
 .quick-links h4,
-.services h4 {
+footer .services h4 {
   color: white;
   margin-bottom: 25px;
   font-size: 1rem;
@@ -85,7 +85,7 @@
 }
 
 .quick-links h4::before,
-.services h4::before {
+footer .services h4::before {
   content: '';
   position: absolute;
   width: 50px;
@@ -101,18 +101,18 @@
 }
 
 .quick-links ul,
-.services ul {
+footer .services ul {
   list-style: none;
 }
 
 .quick-links ul li, 
-.services ul li {
+footer .services ul li {
   padding: 10px 0;
   text-align: start;
 }
 
 .quick-links ul li a, 
-.services ul li a {
+footer .services ul li a {
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
@@ -122,7 +122,7 @@
 }
 
 .quick-links ul li a:hover, 
-.services ul li a:hover {
+footer .services ul li a:hover {
   opacity: 1;
 }
 
@@ -142,12 +142,10 @@
   .footer-row {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 50px 50px;
-    row-gap: 3.5rem;
     column-gap: 0;
     justify-content: center;
     justify-items: center;
-    padding: 5rem 4rem 4rem 4rem;
+    padding: 3rem 4rem;
   }
 
   .newsletter {
@@ -159,7 +157,7 @@
     grid-column: 1 / span 2;
   }
 
-  .services {
+  footer .services {
     grid-column: 1 / span 2;
   }
 
@@ -176,13 +174,13 @@
   }
 
   .quick-links,
-  .services {
+  footer .services {
     align-items: center;
     width: 100%;
   }
 
   .quick-links ul,
-  .services ul {
+  footer .services ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -190,20 +188,20 @@
   }
 
   .quick-links h4,
-  .services h4 {
+  footer .services h4 {
     text-align: left;
     font-size: 0.9rem;
   }
 
 
   .quick-links ul li, 
-  .services ul li {
+  footer .services ul li {
     text-align: left;
     padding: 0.5rem;
   }
 
   .quick-links ul li a, 
-  .services ul li a {
+  footer .services ul li a {
     font-size: 0.8rem;
   }
 
@@ -218,12 +216,10 @@
   .footer-row {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 50px;
-    row-gap: 4rem;
     column-gap: 0;
     justify-content: center;
     justify-items: center;
-    padding: 5rem 4rem 4rem 4rem
+    padding: 3rem 4rem;
   }
 
  .newsletter {
@@ -244,13 +240,13 @@
   }
 
   .quick-links,
-  .services {
+  footer .services {
     align-items: center;
     width: 100%;
   }
 
   .quick-links ul,
-  .services ul {
+  footer .services ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -258,20 +254,20 @@
   }
 
   .quick-links h4,
-  .services h4 {
+  footer .services h4 {
     text-align: left;
     font-size: 0.9rem;
   }
 
 
   .quick-links ul li, 
-  .services ul li {
+  footer .services ul li {
     text-align: left;
     padding: 0.5rem;
   }
 
   .quick-links ul li a, 
-  .services ul li a {
+  footer .services ul li a {
     font-size: 0.8rem;
   }
 
