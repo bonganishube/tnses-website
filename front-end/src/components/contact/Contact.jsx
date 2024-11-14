@@ -19,12 +19,12 @@ const Contact = () => {
                   Belhar, Pentech, Cape Town, Western Cape 7493
                 </li>
                 <li>
-                  <i className="fa-solid fa-envelope"></i>
-                  <a href='mailto:info@tnses.org'>info@tnses.org</a>
+                  <i className="fa-solid fa-phone"></i>
+                  012 345 67-89
                 </li>
                 <li>
-                  <i className="fa-solid fa-phone"></i>
-                  +27 12 345 67-89
+                  <i className="fa-solid fa-envelope"></i>
+                  <a href='mailto:info@tnses.org'>info@tnses.org</a>
                 </li>
               </ul>
             </div>
