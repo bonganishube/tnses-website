@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 60% 20% 20%; 
   gap: 2rem;
-  padding: 40px 100px;
+  padding: 2.5rem 6.25rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -274,6 +274,22 @@ footer .services ul li a:hover {
 
   .copyright {
     font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 687px) {
+  .newsletter p {
+    font-size: 1rem;
+  }
+
+  .quick-links ul li a, 
+  footer .services ul li a {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
     padding: 1rem;
   }
 }
