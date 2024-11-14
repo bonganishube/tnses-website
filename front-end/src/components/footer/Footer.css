@@ -73,6 +73,7 @@ footer .input-submit {
   margin: 1rem 0;
   background-color: #FF6100;
   color: white;
+  box-sizing: border-box;
 }
 
 .quick-links h4,
