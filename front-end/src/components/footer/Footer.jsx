@@ -20,8 +20,10 @@ const Footer = () => {
                 <input type='email' placeholder='Email' className='input-email'></input>
                 <input type='submit' value='Submit' className='input-submit'></input>
               </form>
+              <hr></hr>
             </div>
-        
+
+          
 
           {/* 2nd Column */}
     
@@ -53,10 +55,10 @@ const Footer = () => {
               <ul>
                 <li className='location'><i className="fa-solid fa-location-dot"></i>
                 Belhar, Pentech, Cape Town, Western Cape 7493</li>
+                <li><i className="fa-solid fa-phone"></i>
+                012 345 67-89</li>
                 <li> <i className="fa-solid fa-envelope"></i>
                 <a href='mailto:info@tnses.org'>info@tnses.org</a></li>
-                <li><i className="fa-solid fa-phone"></i>
-                +27 12 345 67-89</li>
               </ul>
             </div>
         </div>
