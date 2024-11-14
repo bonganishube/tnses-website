@@ -47,7 +47,6 @@
 
   }
   
-  /* The caption that appears over the image */
   .carousel-caption {
     position: absolute;
     bottom: 10%; /* Position from the bottom of the container */
@@ -55,7 +54,8 @@
     transform: translateX(-50%); /* Center the caption horizontally */
     text-align: left;
     color: white;
-    background-color: rgba(50, 50, 50, 0.6); /* Semi-transparent background */
+    background: rgba(50, 50, 50, 0.7); /* Semi-transparent background */
+    background: linear-gradient(to right, rgba(50, 50, 50, 0.7) 25%, rgba(50, 50, 50, 0) 100%); /* Fading effect on the right */
     padding: 2rem;
     padding-top: 2px;
     border-radius: 5px; /* Optional: rounded corners for the caption */
@@ -65,7 +65,8 @@
     font-family: 'Marcellus', sans-serif;
     line-height: 1.4;
     z-index: 2;
-  }
+}
+
 
   .carousel-caption::before {
     content: '';
@@ -387,7 +388,7 @@
     }
   }
   
-  @media only screen and (min-width: 560px) and (max-width: 768px) {  
+  @media only screen and (min-width: 560px) and (max-width: 767px) {  
     .carousel-container {
       height: 600px;
     }
