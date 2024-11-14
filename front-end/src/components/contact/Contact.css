@@ -193,10 +193,10 @@ contact {
     background-color: #3578e5; /* Darker blue for submit button hover */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
     .contact-container {
         flex-direction: column;
-        padding: 4rem 1.5rem;
+        padding: 4rem 0.5rem;
     }
 
     .contact-info {
@@ -247,7 +247,15 @@ contact {
 
 
 @media (min-width: 768px) and (max-width: 1280px) {
-    /* .contact-container {
-        flex-wrap: wrap-reverse;
-    } */
+    .contact-container {
+        display: block;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%
+    }
 }
