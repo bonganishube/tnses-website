@@ -245,8 +245,27 @@ footer .contact .location {
 
   .copyright {
     font-size: 0.8rem;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
   }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem ;
+    list-style: none;
+}
+
+  footer .social-icons li a i {
+    color: white;
+    opacity: 0.7;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.6rem;
+}
+
+  footer .social-icons li a:hover i {
+    color: #3a8dff; /* Elegant hover effect on social icons */
+}
 
 }
 
@@ -355,6 +374,9 @@ footer .contact .location {
 
 @media (min-width: 937px) {
   footer .contact {
+    display: none;
+  }
+  footer .social-icons {
     display: none;
   }
 }

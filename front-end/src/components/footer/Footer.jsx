@@ -63,6 +63,12 @@ const Footer = () => {
 
         <hr></hr>
           <div className='copyright'>
+          <ul className='social-icons'>
+              <li><a href=''><i className='fab fa-facebook'></i></a></li>
+              <li><a href=''><i className='fab fa-instagram'></i></a></li>
+              <li><a href=''><i className='fab fa-twitter'></i></a></li>
+              <li><a href=''><i className='fab fa-youtube'></i></a></li>
+            </ul>
             <p>
               &#169; 2024 TNSES. All Rights Reserved.
             </p>
