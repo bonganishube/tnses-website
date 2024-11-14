@@ -44,19 +44,19 @@ const Carousel = () => {
     {
       text: "First slide",
       label: "Google for Education",
-      description: "Registration is open!",
+      description: "Google for Education is a suite of tools and resources designed to help educators, students, and schools manage and enhance the learning experience.",
       image: googleEducation, // Directly use the imported image
     },
     {
       text: "Second slide",
       label: "Second slide label",
-      description: "Build your digital skills.",
+      description: "Google has developed various educational products to support digital learning, improve collaboration, and facilitate communication in educational settings.",
       image: blueprint,
     },
     {
       text: "Third slide",
       label: "Third slide label",
-      description: "Register before 30 Nov.",
+      description: "hese tools are used by millions of students and teachers around the world, from K–12 to higher education institutions.",
       image: readiness,
     },
   ];
@@ -94,7 +94,10 @@ const Carousel = () => {
               <span className='for-education'> for Education</span>
              </h3>
             <p>{slides[activeIndex].description}</p>
-            <button>Explore More <img src={darkArrow} alt=''/></button>
+            <button>
+              Explore More 
+              {/* <img src={darkArrow} alt=''/> */}
+            </button>
           </div>
         </div>
       </div>
