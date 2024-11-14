@@ -166,7 +166,7 @@ footer .contact .location {
   .footer-row {
     display: grid;
     grid-template-columns: 50% 50%;
-    column-gap: 0;
+    gap: 1rem;
     justify-content: center;
     justify-items: center;
     padding: 3rem 3rem;
@@ -175,6 +175,7 @@ footer .contact .location {
   .newsletter {
     grid-column: 1 / span 2;
     padding: 0;
+    margin-bottom: 2rem;
   }
 
   .quick-links {
@@ -253,7 +254,7 @@ footer .contact .location {
   .footer-row {
     display: grid;
     grid-template-columns: 50% 50%;
-    column-gap: 0;
+    gap: 1rem;
     justify-content: center;
     justify-items: center;
     padding: 3rem 4rem;
@@ -262,6 +263,7 @@ footer .contact .location {
  .newsletter {
     grid-column: 1 / span 2;
     padding: 0;
+    margin-bottom: 2rem;
   }
 
   .newsletter p {
