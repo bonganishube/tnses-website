@@ -12,7 +12,7 @@
 
 .services-container {
   width: 100%;
-  padding: 2rem 1rem 0 1rem;
+  padding: 4rem 2rem;
 }
 
 .services-info {
@@ -83,7 +83,7 @@
 }
 
 .tab-list .tab-three {
-  width: 5.5rem;
+  width: 9rem;
   margin: 0 auto;
 }
 
@@ -198,7 +198,7 @@
 
 @media only screen and (max-width: 768px) {
   .services-container {
-    padding: 2rem 1rem 0 1rem;
+    padding: 5rem 1rem 3rem;
   }
   .services-info h2 {
     font-size: 1.3rem;
