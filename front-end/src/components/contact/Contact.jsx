@@ -11,7 +11,7 @@ const Contact = () => {
         </div>
         <div className='contact-container'>
           <div className='contact-info'>
-            <div className='footer-col'>
+            <div>
               <h4>Contact Info</h4>
               <ul className='contact-icons'>
                 <li>
