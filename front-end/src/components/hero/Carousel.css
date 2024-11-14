@@ -161,7 +161,7 @@
   }
 
   /* Base styles for each letter */
-span {
+.carousel-container span {
   opacity: 0;  /* Start with letters invisible */
   transform: translateY(20px);  /* Start from below */
   animation-duration: 5s;  /* Slower animation duration */
@@ -249,7 +249,7 @@ span {
 
   @media only screen and (max-width: 768px) {
     .carousel-container {
-      height: 60vh;
+      height: 100%;
     }
 
     .carousel-image-mobile::before {
