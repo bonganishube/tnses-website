@@ -14,7 +14,6 @@
 .navbar-container {
     box-sizing: border-box;
     background-color: transparent;
-    border-radius: 5px;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -114,7 +113,7 @@ nav .buttons {
 
 .darkmode-desktop {
     color: white;
-    margin: 4px 10px 0 10px;
+    margin: 4px 0 0 10px;
 }
 
 .mobile-view {
@@ -150,7 +149,6 @@ nav .buttons {
     }
     .navbar-container {
       width: 100%;
-      border-radius: 5px;
       padding-left: 1.3rem;
     }
     .navbar-items img {
@@ -225,7 +223,7 @@ nav .buttons {
       /* margin: 1.25rem 0; */
       left: 50%;
       transform: translateX(-50%);
-      padding: 0 1.5rem;
+      padding: 1.5rem;
     }
     /* .nav-links {
       position: absolute;
