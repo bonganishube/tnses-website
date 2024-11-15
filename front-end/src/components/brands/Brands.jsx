@@ -10,12 +10,12 @@ const Brands = () => {
   return (
     <div>
       <div className='brands'>
-        <h1>Organisations we've worked with:</h1>
-        <div>
-          <img src={Brand1} alt='brand one' />
-          <img src={Brand2} alt='brand two' />
-          <img src={Brand3} alt='brand three' />
+        {/* <h1>Organisations we've worked with:</h1> */}
+        <div className='brand-image'>
           <img src={Brand4} alt='brand four' />
+          <img src={Brand1} alt='brand one' />
+          <img src={Brand3} alt='brand three'/>
+          <img src={Brand2} alt='brand two' />
           <img src={Brand5} alt='brand five' />
         </div>
       </div>
