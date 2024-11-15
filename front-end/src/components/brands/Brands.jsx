@@ -8,10 +8,23 @@ import Brand5 from '../../assets/brands/5.svg';
 
 const Brands = () => {
   return (
-    <div>
+    <div className='brands-wrapper'>
       <div className='brands'>
-        {/* <h1>Organisations we've worked with:</h1> */}
+        <h1>Organisations we've worked with:</h1>
         <div className='brand-image'>
+          {/* Original set of brand images */}
+          <img src={Brand4} alt='brand four' />
+          <img src={Brand1} alt='brand one' />
+          <img src={Brand3} alt='brand three'/>
+          <img src={Brand2} alt='brand two' />
+          <img src={Brand5} alt='brand five' />
+          {/* Duplicate the brand images for seamless scrolling */}
+          <img src={Brand4} alt='brand four' />
+          <img src={Brand1} alt='brand one' />
+          <img src={Brand3} alt='brand three'/>
+          <img src={Brand2} alt='brand two' />
+          <img src={Brand5} alt='brand five' />
+          {/* Duplicate the brand images for seamless scrolling */}
           <img src={Brand4} alt='brand four' />
           <img src={Brand1} alt='brand one' />
           <img src={Brand3} alt='brand three'/>
@@ -20,7 +33,7 @@ const Brands = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Brands
+export default Brands;

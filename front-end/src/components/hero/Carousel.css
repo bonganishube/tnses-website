@@ -22,7 +22,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1; 
 }
   
@@ -55,7 +55,7 @@
     text-align: left;
     color: white;
     background: rgba(50, 50, 50, 0.7); /* Semi-transparent background */
-    background: linear-gradient(to right, rgba(50, 50, 50, 0.7) 25%, rgba(50, 50, 50, 0) 100%); /* Fading effect on the right */
+    background: linear-gradient(to right, rgba(50, 50, 50, 0.6) 60%, rgba(255, 255, 255, 0.3) 100%); /* Fading effect on the right */
     padding: 2rem;
     /* padding-top: 1rem; */
     border-radius: 5px; /* Optional: rounded corners for the caption */
@@ -281,7 +281,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1; 
     }
   

@@ -2,13 +2,15 @@
   background-color: #172243; /* Dark background when sticky */
   color: white; /* Sticky navbar text color */
   z-index: 1000; /* Ensure navbar is on top */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for sticky effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
 }
 
+
 .dark .navbar-container {
-  background-color: black;
-  color: var(--text-color);
-  transition: var(--transition);
+  background-color: black; /* Dark background for the navbar */
+  color: var(--text-color); /* Use your text color variable */
+  transition: var(--transition); /* Transition for smooth effects */
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25); /* Lighter, more visible shadow for dark mode */
 }
 
 .navbar-container {
