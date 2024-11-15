@@ -16,7 +16,7 @@
 }
 
 .services-info {
-  text-align: center;
+  text-align: left;
 }
 
 .services-info > * + * {
@@ -38,8 +38,6 @@
 
 .service-category {
   padding: 0.5rem 0 3rem 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .react-tabs {
@@ -51,9 +49,6 @@
   padding: 0;
 }
 
-.react-tabs__tab-panel {
-  display: none;
-}
 
 .react-tabs__tab-panel--selected {
   display: block;
@@ -77,15 +72,15 @@
   cursor: pointer;
 }
 
-.tab-list .tab-one, .tab-two {
+.tab-list .tab-one, .tab-two, .tab-three {
   display: inline-block;
   margin: 1rem 0.7rem;
 }
 
-.tab-list .tab-three {
+/* .tab-list .tab-three {
   width: 9rem;
   margin: 0 auto;
-}
+} */
 
 .tab-list .tab-one:hover, .tab-two:hover, .tab-three:hover {
   background-color: #FF6100; /* Change background on hover */
