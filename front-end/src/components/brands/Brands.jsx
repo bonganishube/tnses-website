@@ -8,8 +8,8 @@ import Brand5 from '../../assets/brands/5.svg';
 
 const Brands = () => {
   return (
-    <div className='brands-wrapper'>
-      <div className='brands'>
+    <div className='brands-container'>
+      <div className='brands-items'>
         <h1>Organisations we've worked with:</h1>
         <div className='brand-image'>
           {/* Original set of brand images */}

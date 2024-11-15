@@ -1,79 +1,40 @@
 .services-submenu {
-    width: 9rem;
+    width: 7rem;
     position: absolute; 
     left: 0;            
     top: 40px;          
     text-align: start;
-    border: 1px solid white;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* transition: ; */
+    border: 2px solid #121B36;
+    border-radius: 5px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
     display: none;    
-    z-index: 0;   
+    z-index: 100;   
   }
 
-  .dark .services-submenu {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: var(--text-color);
-    transition: var(--transition);
-    border: 1px solid black;
-  }
-
-  .dark-nav .services-submenu {
-    color: white;
-    background: #172243;
-    border: 1px solid #0C1226;
-  }
-
-  .services-submenu.open {
+.services-submenu.open {
     display: flex; 
   }
 
-  .dark .services-submenu.open {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: var(--text-color);
-    transition: var(--transition);
-  }
-
-  .dark-nav .services-submenu.open {
-    color: white;
-    background: #172243;
-  }
-
-  .services-submenu li {
-    background-color: rgba(255, 255, 255, 0.6);
+.services-submenu li {
+    background-color: var(--secondary-color);
     cursor: pointer;
     border-radius: 8px;
   }
-
-  .dark .services-submenu li {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: var(--text-color);
-    transition: var(--transition);
-  }
-
-  .dark-nav .services-submenu li {
-    background-color: #172243;
-    cursor: pointer;
-  }
   
-  /* Styling for each item */
-  .submenu-item {
+.submenu-item {
     display: flex;
-    width: 100%;
+    width: 80%;
     font-size: 0.8rem;
     font-weight: 400;
-    color: var(--text-color);
+    line-height: 1.3rem;
+    color: white;
     text-decoration: none;
     transition: all 0.3s ease;
   }
-
-  .dark-nav .submenu-item {
-    color: white;
-  }
   
-  .submenu-item:hover {
+.submenu-item:hover {
     color: #FF6100;
-    border-bottom: 2px solid #FF6100;
+    border-bottom: 1px solid #FF6100;
   }
   

@@ -45,7 +45,7 @@ const Carousel = () => {
       text: "First slide",
       label: "Google for Education",
       description: "Registration is open!",
-      image: googleEducation, // Directly use the imported image
+      image: googleEducation,
     },
     {
       text: "Second slide",
@@ -70,20 +70,21 @@ const Carousel = () => {
   }, []); // Empty dependency array ensures interval is set once on mount
 
   return (
+    <div id='home'>
       <div className="carousel-container">
         <div className="carousel-slide">
           <CarouselImage imageSrc={slides[activeIndex].image} />
           <CarouselImageMobile imageSrcMobile={mobile[activeIndex].image} />
           <div className="carousel-controls">
-          <button className="carousel-control-prev" onClick={() => setActiveIndex((activeIndex - 1 + slides.length) % slides.length)}>
-            &#10094;
-          </button>
-          <button className="carousel-control-next" onClick={() => setActiveIndex((activeIndex + 1) % slides.length)}>
-            &#10095;
-          </button>
-        </div>
+            {/* <button className="carousel-control-prev" onClick={() => setActiveIndex((activeIndex - 1 + slides.length) % slides.length)}>
+              &#10094;
+            </button>
+            <button className="carousel-control-next" onClick={() => setActiveIndex((activeIndex + 1) % slides.length)}>
+              &#10095;
+            </button> */}
+          </div>
           <div className="carousel-caption">
-            <h3>
+            <h1>
               {/* {slides[activeIndex].label} */}
               <span className='g-one'>G</span>
               <span className='o-one'>o</span>
@@ -92,7 +93,7 @@ const Carousel = () => {
               <span className='l'>l</span>
               <span className='e'>e</span>
               <span className='for-education'> for Education</span>
-             </h3>
+             </h1>
             <p>{slides[activeIndex].description}</p>
             <button>Explore More 
               <FaArrowRightLong className='fa-arrow'/>
@@ -100,8 +101,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-
-      
+    </div> 
   );
 };
 

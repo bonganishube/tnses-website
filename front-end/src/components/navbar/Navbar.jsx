@@ -54,16 +54,18 @@ const Navbar = () => {
 
   return (
     <nav className={`${sticky ? 'dark-nav' : ''} ${theme === 'dark' ? 'dark' : ''}`}>
-      <div className="navbar-container">
-        <div className="navbar-items">
-          <div className="logo">
+      <div className='navbar-container'>
+        <div className='navbar-items'>
+          <div className='logo'>
             <a href="#">
-              <img src={Logo} alt="Logo" />
+              <img src={Logo} alt='logo' />
             </a>
             <h1>TNSES</h1>
           </div>
-          <div className="desktop-view">
-            <ul className="nav-links">
+
+          {/* Desktop View */}
+          <div className='desktop-view'>
+            <ul className='nav-links'>
               {MenuLinks.map(({ id, name, link }) => {
                 if (name === 'Services') {
                   return (
@@ -71,44 +73,47 @@ const Navbar = () => {
                       key={id} 
                       onMouseEnter={() => handleDropdownToggle(true)} 
                       onMouseLeave={() => handleDropdownToggle(false)}
-                      style={{ position: 'relative' }}  // Ensure the parent <li> has relative positioning
+                      style={{ position: 'relative' }}
                     >
-                      <a href={link}  className='nav-link'>{name}</a>
+                      <a href={link} className='nav-link'>{name}</a>
                       {dropdownOpen && <Dropdown isOpen={dropdownOpen} closeDropdown={() => setDropdownOpen(false)} />}
                     </li>
                   );
                 }
                 return (
                   <li key={id}>
-                    <a href={link} className="nav-link">{name}</a>
+                    <a href={link} className='nav-link'>{name}</a>
                   </li>
                 );
               })}
             </ul>
-            <button className="sign-in">
-              <i className="fa fa-sign-out"></i>Sign In
+            <button>
+              <i className='fa fa-sign-out'></i>Sign In
             </button>
-            <div className="darkmode-desktop">
+            <div className='darkmode-desktop'>
               <DarkMode setTheme={setTheme} theme={theme} />
             </div>
           </div>
-          <div className="mobile-view">
-            <div className="darkmode-mobile">
+
+          {/* Mobile View */}
+          <div className='mobile-view'>
+            <div className='darkmode-mobile'>
               <DarkMode setTheme={setTheme} theme={theme} />
             </div>
-            <button className="sign-in">
-              <i className="fa fa-sign-out"></i>Sign In
+            <button>
+              <i className='fa fa-sign-out'></i>Sign In
             </button>
             {showMenu ? (
-              <div className="himenualt1">
-                <HiMenuAlt1 onClick={() => setShowMenu(false)} />
-              </div>
+            <div className='himenualt1'>
+              <HiMenuAlt1 onClick={() => setShowMenu(false)} />
+            </div>
             ) : (
-              <div className="himenualt3">
-                <HiMenuAlt3 onClick={() => setShowMenu(true)} />
-              </div>
+            <div className='himenualt3'>
+              <HiMenuAlt3 onClick={() => setShowMenu(true)} />
+            </div>
             )}
           </div>
+
         </div>
       </div>
       {/* <ResponsiveMenu showMenu={showMenu} /> */}

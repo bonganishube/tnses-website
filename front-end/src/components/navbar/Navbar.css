@@ -1,28 +1,20 @@
-.dark-nav .navbar-container {
-  background-color: #172243; /* Dark background when sticky */
-  color: white; /* Sticky navbar text color */
-  z-index: 1000; /* Ensure navbar is on top */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
-}
-
-
-.dark .navbar-container {
-  background-color: black; /* Dark background for the navbar */
-  color: var(--text-color); /* Use your text color variable */
-  transition: var(--transition); /* Transition for smooth effects */
-  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25); /* Lighter, more visible shadow for dark mode */
-}
-
 .navbar-container {
-    box-sizing: border-box;
-    max-width: 1500px;
-    background-color: transparent;
-    position: fixed;
-    border-radius: 5px;
-    top: 1%;
-    z-index: 1;
-    transition: background-color 0.3s ease;
-  }
+  box-sizing: border-box;
+  max-width: 1500px;
+  background-color: transparent;
+  position: fixed;
+  border-radius: 5px;
+  top: 1%;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.dark-nav .navbar-container {
+  background-color: var(--secondary-color);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
   
 .navbar-items {
     display: flex;
@@ -35,7 +27,7 @@
   align-items: center;
 }
 
-.navbar-items img {
+.logo img {
   width: 2.8rem;
   border-radius: 5px;
   margin-top: 0.4rem;
@@ -65,7 +57,6 @@
     cursor: pointer;
     list-style-type: none;
     margin: 0 0.1rem;
-
   }
   
 .nav-link {
@@ -77,32 +68,15 @@
     transition: all 0.3s ease;
   }
 
-.dark-nav .nav-link {
-  color: white;
-}
-  
-.nav-link:hover {
-    color: #FF6100;
-    border-bottom: 2px solid #FF6100;
-  
+.desktop-view .dropdown-menu:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
   }
-
-nav .buttons {
-  display: flex;
-  align-items: center;
-  padding: 0 1.7rem;
-}
-
-
-.log-in:hover {
-    background-color: lightgrey;
-    color:#FF6100;
-}
   
-.sign-in {
-    background-color: #FF6100;
+.desktop-view button {
+    background-color: var(--primary-color);
     color: white;
-    border: 2px solid #FF6100;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     padding: 10px 18px;
     margin: 16px 10px;
@@ -111,11 +85,11 @@ nav .buttons {
     font-size: 0.75rem;
   }
 
-.sign-in i {
+.desktop-view button i {
     margin-right: 5px;
 }
 
-.darkmode-desktop {
+.desktop-view .darkmode-desktop {
     color: white;
     margin: 4px 0 0 10px;
 }
@@ -125,13 +99,29 @@ nav .buttons {
     align-items: center;
 }
 
-.darkmode-mobile {
+.mobile-view .darkmode-mobile {
   color: white;
   width: 1.5rem;
   margin-top: 0.2rem;
 }
 
-.himenualt1 {
+.mobile-view button {
+  background-color: #FF6100;
+  color: white;
+  border: 2px solid #FF6100;
+  border-radius: 5px;
+  padding: 7px 13px;
+  margin: 1px 0 1px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.mobile-view button i {
+  margin-right: 5px;
+}
+
+.mobile-view .himenualt1 {
     color: white;
     font-size: 30px;
     cursor: pointer;
@@ -139,7 +129,7 @@ nav .buttons {
     margin-top: 0.35rem;
   }
 
-.himenualt3 {
+.mobile-view .himenualt3 {
     color: white;
     font-size: 30px;
     cursor: pointer;
@@ -148,75 +138,36 @@ nav .buttons {
   }
 
 
-@media only screen and (max-width: 480px) {
-    .desktop-view {
-      display: none;
-    }
+@media only screen and (max-width: 767px) {
     .navbar-container {
       width: 100%;
+      padding: 0.3rem 1rem;
+      border-radius: 0;
+      top: 0;
     }
-    .navbar-items img {
+
+    .logo img {
       width: 30px;
       margin: 0.6rem 0 0.4rem 0;
     }
+
     .logo h1 {
       font-size: 1rem;
       margin-left: 0.3rem;
       margin-bottom: 0.1rem;
     }
-    .sign-in {
-      background-color: #FF6100;
-      color: white;
-      border: 2px solid #FF6100;
-      border-radius: 5px;
-      padding: 7px 13px;
-      margin: 1px 0 1px 10px;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 0.7rem;
-  }
+
+    .desktop-view {
+      display: none;
+    }
 }
 
-@media only screen and (max-width: 767px) {
-  .navbar-container {
-    width: 100%;
-    padding: 0.3rem 1rem;
-  }
-  .desktop-view {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar-container {
-      width: 100%;
-    }
-    .nav-links {
-      margin-left: 2rem;
-    }
-    .nav-link {
-      font-size: 1rem;
-    }
-    .navbar-items img {
-      width: 40px;
-    }
-    .logo h1 {
-      font-size: 1.2rem;
-    }
-    .log-in {
-      font-weight: 500;
-      font-size: 0.8rem;
-    }
-    .sign-up {
-      font-weight: 500;
-      font-size: 0.8rem;
-    }
-  }
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
     .navbar-container {
       width: 100%;
       padding: 0 1rem;
+      border-radius: 0;
+      top: 0;
     }
     .mobile-view {
       display: none;
@@ -225,16 +176,15 @@ nav .buttons {
 
 @media only screen and (min-width: 1280px) {
     .navbar-container {
-      /* margin: 1.25rem 0; */
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%;
       padding: 0 1rem;
-    }
-    /* .nav-links {
-      position: absolute;
+      border-radius: 5px;
       left: 50%;
       transform: translateX(-50%);
-    } */
+    }
+    .mobile-view {
+      display: none;
+    }
 }
   
   

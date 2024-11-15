@@ -1,10 +1,10 @@
-.brands-wrapper {
+.brands-container {
     background-color: #172243;
     /* padding: 0 2rem; */
     overflow: hidden; /* Hide the overflow to ensure only the visible part of the brands is shown */
   }
   
-  .brands {
+  .brands-items {
     padding: 4rem;
     margin: 0 4rem;
     background: #172243;
@@ -12,7 +12,7 @@
     position: relative; 
   }
   
-  .brands h1 {
+  .brands-items h1 {
     color: white;
     text-align: center;
     font-size: medium;
@@ -38,21 +38,21 @@
     }
   }
   
-  /* Styles for each brand image */
+  
   .brand-image img {
     width: 6rem;
     opacity: 0.3;
     filter: brightness(100%) contrast(100%) grayscale(100%) sepia(100%) saturate(0%);
-    transition: opacity 0.3s ease, filter 0.3s ease; /* Smooth transition on hover */
+    transition: opacity 0.3s ease, filter 0.3s ease;
   }
   
-  @media only screen and (max-width: 480px) {
-    .brands {
+  @media only screen and (max-width: 767px) {
+    .brands-items {
       padding: 1rem;
       padding-bottom: 2rem;
       margin: 1rem 0.1rem;
     }
-    .brands h1 {
+    .brands-items h1 {
       margin-top: 0.7rem;
       margin-bottom: 1.5rem;
       font-size: 0.9rem;
@@ -61,26 +61,7 @@
       width: 4rem;
     }
     .brand-image {
-      gap: 1.5rem; /* Adjust the gap for smaller screens */
-    }
-  }
-  
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .brands {
-      padding: 2.5rem;
-      padding-bottom: 2.8rem;
-    }
-    .brands h1 {
-      font-size: 1rem;
-    }
-    .brand-image img {
-      width: 6rem;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .brand-image {
-      padding: 0 8rem;
+      gap: 1.5rem;
     }
   }
   

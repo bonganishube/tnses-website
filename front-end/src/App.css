@@ -1,25 +1,30 @@
 html {
   box-sizing: border-box;
-  /* max-width: 1280px; */
   margin: 0 auto;
-  text-align: center;
+}
 
+.dark html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+body {
   font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.dark html {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
+.dark body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
 }
 
-.dark body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
+:root {
+  --primary-color: #FF6100;
+  --secondary-color: #172243;
 }
 
 /* Customize the scrollbar width */
