@@ -309,10 +309,10 @@
       display: none;
     }
     .carousel-caption {
-      width: 90%; 
+      width: 75%; 
       height: 200px;
       padding: 1.5rem;
-      padding-top: 15px;
+      padding-top: 1.4rem;
       bottom: 30%;
     }
 
