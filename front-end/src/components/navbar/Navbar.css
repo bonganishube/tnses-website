@@ -14,8 +14,6 @@
 .navbar-container {
     box-sizing: border-box;
     background-color: transparent;
-    margin: 1.25rem;
-    padding: 0 4rem 0 2rem;
     border-radius: 5px;
     position: fixed;
     top: 0;
@@ -180,6 +178,7 @@ nav .buttons {
 @media only screen and (max-width: 767px) {
   .navbar-container {
     width: 100%;
+    padding: 0 1rem;
   }
   .desktop-view {
     display: none;
@@ -223,10 +222,10 @@ nav .buttons {
 
 @media only screen and (min-width: 1280px) {
     .navbar-container {
-      margin: 1.25rem 0;
+      /* margin: 1.25rem 0; */
       left: 50%;
       transform: translateX(-50%);
-      padding: 0 2rem 0 2rem;
+      padding: 0 1.5rem;
     }
     /* .nav-links {
       position: absolute;

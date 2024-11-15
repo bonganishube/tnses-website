@@ -57,10 +57,10 @@
     background: rgba(50, 50, 50, 0.7); /* Semi-transparent background */
     background: linear-gradient(to right, rgba(50, 50, 50, 0.7) 25%, rgba(50, 50, 50, 0) 100%); /* Fading effect on the right */
     padding: 2rem;
-    padding-top: 2px;
+    /* padding-top: 1rem; */
     border-radius: 5px; /* Optional: rounded corners for the caption */
     width: 500px; /* Adjust width to make caption fit better */
-    height: 200px;
+    height: 250px;
     max-width: 600px; /* Prevent it from getting too wide */
     font-family: 'Marcellus', sans-serif;
     line-height: 1.4;
@@ -74,6 +74,7 @@
     width: 0.125rem;
     height: 12.5rem; 
     left: 0;
+    top: 0;
     background-color: #FF6100;
   }
 
@@ -259,8 +260,14 @@
   animation-delay: 1.4s;
 }
 
-  
-
+  /* @media (max-width: 400px) {
+    .carousel-caption h3 span {
+      font-size: 1.3rem;
+    }
+    .carousel-caption p { 
+      font-size: 1.1rem;
+    }
+  } */
 
   @media only screen and (max-width: 768px) {
     .carousel-container {
@@ -310,10 +317,10 @@
     }
 
     .carousel-caption h3 span {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
     .carousel-caption p { 
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     }
 
     .carousel-caption::before {
@@ -391,6 +398,13 @@
   @media only screen and (min-width: 560px) and (max-width: 767px) {  
     .carousel-container {
       height: 600px;
+    }
+
+    .carousel-caption h3 span {
+      font-size: 1.8rem;
+    }
+    .carousel-caption p { 
+      font-size: 1.5rem;
     }
     /* .carousel-image img {
       object-position: center;
