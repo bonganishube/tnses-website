@@ -1,12 +1,11 @@
 .brands-wrapper {
     background-color: #172243;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     overflow: hidden; /* Hide the overflow to ensure only the visible part of the brands is shown */
   }
   
   .brands {
     padding: 4rem;
-    padding-bottom: 4rem;
     margin: 0 4rem;
     background: #172243;
     overflow: hidden;
@@ -59,7 +58,7 @@
       font-size: 0.9rem;
     }
     .brand-image img {
-      width: 3.5rem;
+      width: 4rem;
     }
     .brand-image {
       gap: 1.5rem; /* Adjust the gap for smaller screens */
@@ -69,6 +68,7 @@
   @media only screen and (min-width: 480px) and (max-width: 768px) {
     .brands {
       padding: 2.5rem;
+      padding-bottom: 2.8rem;
     }
     .brands h1 {
       font-size: 1rem;
