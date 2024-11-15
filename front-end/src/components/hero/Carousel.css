@@ -71,7 +71,7 @@
   .carousel-caption::before {
     content: '';
     position: absolute;
-    width: 0.01rem;
+    width: 0.05rem;
     height: 12.5rem; 
     left: 0;
     top: 0;
@@ -326,7 +326,7 @@
     .carousel-caption::before {
       content: '';
       position: absolute;
-      width: 0.01rem;
+      width: 0.05rem;
       height: 12.5rem; 
       left: 0;
       top: 0;
