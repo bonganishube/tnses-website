@@ -71,7 +71,7 @@ const Services = () => {
                       <p>Lorem Ipsum is simply dummy</p>
                     </div>
                     <a className='service-link'>
-                      Register Now
+                      Register now <FaArrowRightLong className='fa-arrow'/>
                     </a>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ const Services = () => {
                       <p>Lorem Ipsum is simply dummy</p>
                     </div>
                     <a className='service-link'>
-                      Register Now
+                      Register now <FaArrowRightLong className='fa-arrow'/>
                     </a>
                   </div>
                 </div>
