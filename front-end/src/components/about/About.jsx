@@ -16,7 +16,7 @@ const About = () => {
             <div className="about-container">
                 <div className="about-content">
                     <div className="about-left">
-                        <h2>About Us</h2>
+                        <h1>About Us</h1>
                         <p>
                             We lower our stress levels, we get to know our pain, we connect better, 
                             we improve our focus, and we're kinder to ourselves. Let us walk you 
