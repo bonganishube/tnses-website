@@ -153,6 +153,10 @@
         padding-top: 0;
     }
 
+    .about-left h1 {
+        font-size: 1.5rem;
+    }
+
     .video-close-button {
         font-weight: bold;
     }
