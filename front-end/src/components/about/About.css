@@ -48,7 +48,7 @@
 .thumbnail-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     height: 350px;
     border-right: 10px solid var(--primary-color);
     border-bottom: 10px solid var(--secondary-color);
@@ -63,6 +63,12 @@
     object-fit: cover;
     z-index: 50;
 }
+
+/* .about-right-button {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+} */
 
 .faplaycircle {
     color: #FF6100;
@@ -122,12 +128,6 @@
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-}
-
-.about-right-button {
-    display: flex;
-    gap: 0.25rem;
-    align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
