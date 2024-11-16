@@ -12,7 +12,7 @@ const Services = () => {
       <div className='services-container'>
         <div className='services-info'>
           <h1>
-            What We Can Do Together
+            What We Offer
           </h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.

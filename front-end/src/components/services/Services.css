@@ -236,9 +236,12 @@
   .service-info h2 {
     font-size: 1.25rem;
     margin-top: 0;
-    margin-bottom: 1.3rem;
+    margin-bottom: 2rem;
   }
   
+  .service-info h2::before {
+    width: 50px;
+  }
   .service-info p {
     font-size: 1rem;
     font-weight: 400;
