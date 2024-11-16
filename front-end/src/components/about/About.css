@@ -146,6 +146,10 @@
     .about-left {
         padding-top: 0;
     }
+
+    .video-close-button {
+        font-weight: bold;
+    }
     
 }
 
