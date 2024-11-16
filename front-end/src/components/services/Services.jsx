@@ -4,15 +4,16 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import googleEducationImage from '../../assets/services/google-education.jpg';
 import blueprintImage from '../../assets/services/blueprint.jpg';
 import mentorshipImage from '../../assets/services/mentorship.jpg';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Services = () => {
   return (
     <div className='services-section' id='services'>
       <div className='services-container'>
         <div className='services-info'>
-          <h2>
+          <h1>
             What We Can Do Together
-          </h2>
+          </h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
           </p>
@@ -29,64 +30,41 @@ const Services = () => {
                 
               <TabPanel >
                 <div className='service-tab'>
+                  <img src={googleEducationImage} alt='' className='service-image'/>  
                   <div className='service-info'>
-                    <h3>
+                    <h2>
                       Google for Education
-                    </h3>
+                    </h2>
                     <p>
                     Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </p>
-                    <h4>
+                    <h3>
                       Benefits
-                    </h4>
+                    </h3>
                     <div className='service-list'>
                       <p>Lorem Ipsum is simply dummy</p>
                       <p>Lorem Ipsum is simply dummy</p>
                       <p>Lorem Ipsum is simply dummy</p>
                     </div>
                     <a className='service-link'>
-                      Register Now
+                      Register now <FaArrowRightLong className='fa-arrow'/>
                     </a>
                   </div>
-                  <img src={googleEducationImage} alt='' className='service-image'/>
                 </div>
               </TabPanel>
               <TabPanel>
               <div className='service-tab'>
-                  <div className='service-info'>
-                    <h3>
-                      Blueprint
-                    </h3>
-                    <p>
-                    Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    <h4>
-                      Benefits
-                    </h4>
-                    <div className='service-list'>
-                      <p>Lorem Ipsum is simply dummy</p>
-                      <p>Lorem Ipsum is simply dummy</p>
-                      <p>Lorem Ipsum is simply dummy</p>
-                    </div>
-                    <a className='service-link'>
-                      Register Now
-                    </a>
-                  </div>
                   <img src={blueprintImage} alt='' className='service-image'/>
-                </div>
-              </TabPanel>
-              <TabPanel>
-              <div className='service-tab'>
                   <div className='service-info'>
-                    <h3>
-                      Mentorship
-                    </h3>
+                    <h2>
+                      Blueprint
+                    </h2>
                     <p>
                     Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </p>
-                    <h4>
+                    <h3>
                       Benefits
-                    </h4>
+                    </h3>
                     <div className='service-list'>
                       <p>Lorem Ipsum is simply dummy</p>
                       <p>Lorem Ipsum is simply dummy</p>
@@ -96,7 +74,30 @@ const Services = () => {
                       Register Now
                     </a>
                   </div>
+                </div>
+              </TabPanel>
+              <TabPanel>
+              <div className='service-tab'>
                   <img src={mentorshipImage} alt='' className='service-image'/>
+                  <div className='service-info'>
+                    <h2>
+                      Mentorship
+                    </h2>
+                    <p>
+                    Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                    <h3>
+                      Benefits
+                    </h3>
+                    <div className='service-list'>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                      <p>Lorem Ipsum is simply dummy</p>
+                    </div>
+                    <a className='service-link'>
+                      Register Now
+                    </a>
+                  </div>
                 </div>
               </TabPanel>
             </Tabs>

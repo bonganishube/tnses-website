@@ -12,27 +12,29 @@
 
 .services-container {
   width: 100%;
+  max-width: 1500px;
   padding: 4rem 2rem;
 }
 
 .services-info {
   text-align: left;
+  padding: 0 4rem;
 }
 
 .services-info > * + * {
   margin-bottom: 1.25rem; 
 }
 
-.services-info h2 {
+.services-info h1 {
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Marcellus', sans-serif;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .services-info p {
   font-size: 1.1rem;
-  margin: 0 8rem;
+  /* margin: 0 8rem; */
   line-height: 1.8rem;
 }
 
@@ -44,19 +46,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.react-tabs__tab-list {
-  margin: 0 0 10px;
-  padding: 0;
-}
-
-
 .react-tabs__tab-panel--selected {
   display: block;
 }
 
 .tab-list {
-  margin-bottom: 3rem;
-  color: #172243
+  margin: 0 4rem 1.3rem 5rem;
+  color: #636b7a;
 }
 
 .dark .tab-list {
@@ -70,17 +66,9 @@
   list-style: none;
   padding: 14px 24px;
   cursor: pointer;
-}
-
-.tab-list .tab-one, .tab-two, .tab-three {
   display: inline-block;
   margin: 1rem 0.7rem;
 }
-
-/* .tab-list .tab-three {
-  width: 9rem;
-  margin: 0 auto;
-} */
 
 .tab-list .tab-one:hover, .tab-two:hover, .tab-three:hover {
   background-color: #FF6100; /* Change background on hover */
@@ -92,7 +80,7 @@
   background-color: #FF6100; /* Change background on active click */
   border-color: #FF6100;     /* Change border color on active click */
   color: white;              /* Change text color on active click */
-  transform: scale(0.98);     /* Optional: Slightly reduce the size on active click */
+  transform: scale(0.98);      /* Optional: Slightly reduce the size on active click */
 }
 
 .react-tabs__tab--selected {
@@ -104,9 +92,8 @@
   display: grid;
   grid-template-columns: 1fr; 
   gap: 2rem;
-  margin-top: 2rem;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1500px;
   width: 90%;
   border: 2px solid #FF6100;
   border-radius: 5px;
@@ -116,7 +103,7 @@
 .service-info {
   background-color: #E8EFF2;
   border-radius: 5px;
-  padding: 2rem 2rem; 
+  padding: 2rem 2rem 1.5rem 2rem; 
   text-align: left;
 }
 
@@ -130,20 +117,28 @@
   transition: var(--transition);
 }
 
-.service-info h3 {
+.service-info h2 {
   font-size: 1.7rem;
   font-weight: 700;
   color:#172243;
-  margin-top: 0;
-  margin-bottom: 0;
+  position: relative;
 }
 
-.dark .service-info h3 {
+.service-info h2::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 2px; 
+  bottom: -9px;
+  background-color: #FF6100;
+}
+
+.dark .service-info h2 {
   color: white;
 }
 
 .service-info p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.4rem;
@@ -153,14 +148,14 @@
   color:#ececec
 }
 
-.service-info h4 {
+.service-info h3 {
   font-size: 1.2rem;
   font-weight: 600;
   color:#172243;
-  margin-bottom: 0;
+  margin-top: 0.5rem;
 }
 
-.dark .service-info h4 {
+.dark .service-info h3 {
   color: white
 }
 
@@ -172,15 +167,25 @@
 }
 
 .service-link {
+  display: flex;
+  align-items: center;
   font-size: 1rem;
   font-weight: 200;
-  color: #FF6100;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-color: #FF6100;
+  color: var(--text-color);
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1rem; 
+  margin-top: 0.5rem;
+}
+
+.service-tab .fa-arrow {
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+  border: 4px solid var(--secondary-color);
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: #E8EFF2;
+  /* padding: 0.5rem; */
 }
 
 .service-image {
@@ -195,7 +200,7 @@
   .services-container {
     padding: 5rem 1rem 3rem;
   }
-  .services-info h2 {
+  .services-info h1 {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 1.4rem;
@@ -226,7 +231,7 @@
     text-align: center;
     padding: 1.6rem 1.1rem;
   }
-  .service-info h3 {
+  .service-info h2 {
     font-size: 1.2rem;
     margin-top: 0;
     margin-bottom: 1.3rem;
@@ -239,14 +244,14 @@
     margin-bottom: 1rem;
   }
   
-  .service-info h4 {
+  .service-info h3 {
     display: none;
     font-size: 1rem;
     font-weight: 600;
     color:#172243;
     margin-bottom: 0.2rem;
   }
-  .dark .service-info h4 {
+  .dark .service-info h3 {
     color: white
   }
   
@@ -299,7 +304,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .service-info h3 {
+  .service-info h2 {
     margin-bottom: 1.3rem;
   }
 }

@@ -30,6 +30,18 @@ const Brands = () => {
           <img src={Brand3} alt='brand three'/>
           <img src={Brand2} alt='brand two' />
           <img src={Brand5} alt='brand five' />
+          {/* Duplicate the brand images for seamless scrolling */}
+          <img src={Brand4} alt='brand four' />
+          <img src={Brand1} alt='brand one' />
+          <img src={Brand3} alt='brand three'/>
+          <img src={Brand2} alt='brand two' />
+          <img src={Brand5} alt='brand five' />
+          {/* Duplicate the brand images for seamless scrolling */}
+          <img src={Brand4} alt='brand four' />
+          <img src={Brand1} alt='brand one' />
+          <img src={Brand3} alt='brand three'/>
+          <img src={Brand2} alt='brand two' />
+          <img src={Brand5} alt='brand five' />
         </div>
       </div>
     </div>

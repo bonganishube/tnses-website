@@ -1,7 +1,7 @@
 .brands-container {
     background-color: #172243;
-    /* padding: 0 2rem; */
-    overflow: hidden; /* Hide the overflow to ensure only the visible part of the brands is shown */
+    padding: 0 2rem;
+    overflow: hidden;
   }
   
   .brands-items {
@@ -10,6 +10,8 @@
     background: #172243;
     overflow: hidden;
     position: relative; 
+    max-width: 1500px;
+    margin: 0 auto;
   }
   
   .brands-items h1 {

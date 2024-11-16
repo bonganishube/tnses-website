@@ -70,7 +70,7 @@ const Carousel = () => {
   }, []); // Empty dependency array ensures interval is set once on mount
 
   return (
-    <div id='home'>
+    <div className='hero-section' id='home'>
       <div className="carousel-container">
         <div className="carousel-slide">
           <CarouselImage imageSrc={slides[activeIndex].image} />
