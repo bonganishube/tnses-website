@@ -94,6 +94,10 @@
   padding: 1rem;
 }
 
+.service-image {
+  border-radius: 5px 0 0 5px !important;
+}
+
 .service-info {
   background-color: #E8EFF2;
   border-radius: 5px;
