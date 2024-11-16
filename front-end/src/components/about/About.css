@@ -143,6 +143,12 @@
         width: 100%;
     }
 
+    .thumbnail-container {
+        border-right: 0.5rem solid var(--primary-color);
+        border-bottom: 0.5rem solid var(--secondary-color);
+        border-top: 0.5rem solid var(--secondary-color);
+    }
+
     .about-left {
         padding-top: 0;
     }
