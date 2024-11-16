@@ -207,6 +207,7 @@
   .services-info p {
     font-size: 1rem;
     line-height: 1.5rem;
+    margin-left: 1.2rem;
   }
 
   .tab-list {
@@ -220,7 +221,7 @@
   }
 
   .service-category {
-    padding: 1rem;
+    padding-bottom: 0;
   }
 
   .service-tab {

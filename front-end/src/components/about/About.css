@@ -158,6 +158,10 @@
         font-size: 1.5rem;
     }
 
+    .about-left p {
+        padding-left: 1.2rem;
+    }
+
     .video-close-button {
         font-weight: bold;
     }
@@ -165,10 +169,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
-    .about-container {
-        /* padding: 4rem 2rem; */
-    }
-
     .about-content {
         padding: 0 3rem;
         gap: 4rem;
