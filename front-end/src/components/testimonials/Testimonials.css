@@ -1,0 +1,107 @@
+.testimonials-section {
+    background-color: var(--secondary-color);
+    padding: 6rem 2rem;
+  }
+  
+  .testimonials-container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-section {
+    text-align: center;
+  }
+  
+  .testimonial-card {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+        'text'
+        'image';
+    gap: 2rem;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+  }
+  
+  .testimonial-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .testimonial-info h1 {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Marcellus', sans-serif;
+  }
+  
+  .testimonial-info p {
+    font-style: italic;
+    color: #6B7280;
+  }
+  
+  .testimonial-info h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 14px;
+    color: white;
+    opacity: 0.5;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #4CAF50; /* Green for active dot */
+    opacity: 1;
+  }
+  
+  /* For medium and larger screens */
+  @media (max-width: 767px) {
+    .testimonial-card img {
+      width: 200px;
+      height: 290px;
+      grid-area: image;
+      justify-content: center;
+    }
+  
+    .testimonial-info {
+      grid-area: text;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    .testimonial-card {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .testimonial-card {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+    .testimonial-info p {
+      font-size: 1.1rem; /* Slightly increase the font size on larger screens */
+    }
+  }
+  
