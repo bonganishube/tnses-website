@@ -48,7 +48,7 @@
     position: relative;
     width: 100%;
     max-width: 800px;
-    height: 350px;
+    height: 400px;
     border-right: 16px solid var(--primary-color);
     border-bottom: 16px solid var(--secondary-color);
     border-top: 16px solid var(--secondary-color);
@@ -169,4 +169,8 @@
         padding: 0 2rem;
         gap: 4rem;
     }
+}
+
+@media only screen and (min-width: 1280px) {
+
 }

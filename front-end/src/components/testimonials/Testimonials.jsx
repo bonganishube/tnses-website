@@ -35,7 +35,7 @@ const Testimonials = () => {
     speed: 600, // Slide transition speed
     slidesToShow: 1, // Show one testimonial at a time
     slidesToScroll: 1, // Scroll one at a time
-    autoplay: true, // Enable autoplay
+    autoplay: false, // Enable autoplay
     autoplaySpeed: 3000, // Auto transition time (in ms)
     cssEase: "linear", // Transition effect
     fade: true, // Enable fade transition
