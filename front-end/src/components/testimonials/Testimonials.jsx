@@ -9,20 +9,20 @@ import testimonialThree from "../../assets/testimonials/testimonial-three.jpg";
 const testimonialData = [
   {
     id: 1,
-    name: "Jane Calathan - Director of Design Operations, Cape Town",
-    text: "The results have been incredible. With Power Digital, it feels like they are in our trench, supporting and understanding us. They are like a partner and mentor in helping us get where we want to be.",
+    name: "Jane Calathan - Director at Design Garage, Cape Town",
+    text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     img: testimonialOne,
   },
   {
     id: 2,
-    name: "Sarah Black - Head of Operations, Cape Town",
-    text: "I’ve never worked with a team so committed to our success. They truly go above and beyond!",
+    name: "John Stevens - Head of Operations at Minc, Cape Town",
+    text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     img: testimonialTwo,
   },
   {
     id: 3,
-    name: "John Doe - CEO, Cape Town",
-    text: "Working with Power Digital has been an incredible experience. Their approach and strategies have helped us grow.",
+    name: "Nomonde Mark - CEO at Floss, Cape Town",
+    text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     img: testimonialThree,
   },
 ];

@@ -18,9 +18,7 @@ const About = () => {
                     <div className="about-left">
                         <h1>About Us</h1>
                         <p>
-                            We lower our stress levels, we get to know our pain, we connect better, 
-                            we improve our focus, and we're kinder to ourselves. Let us walk you 
-                            through the basics in our mindful guide on how to meditate.
+                        Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                         </p>
                     </div>
                     <div className="about-right">
