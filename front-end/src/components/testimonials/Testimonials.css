@@ -15,10 +15,10 @@
   }
   
   .testimonial-card {
+    position: relative;
     background-color: var(--secondary-color);
     color: white;
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
     animation: fadeIn 1s forwards;
     display: grid;
@@ -27,8 +27,7 @@
         'text'
         'image';
     /* gap: 2rem; */
-    align-items: center;
-    /* justify-content: left; */
+    /* align-items: center; */
   }
   
   .testimonial-card img {
@@ -36,6 +35,7 @@
     height: auto;
     object-fit: cover;
     border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .testimonial-info {
@@ -57,6 +57,7 @@
     font-style: italic;
     line-height: 1.5;
     color: #6B7280;
+    margin-bottom: 1.5rem;
   }
   
   .testimonial-info h2 {
@@ -64,6 +65,15 @@
     font-weight: 700;
     font-family: 'Marcellus', sans-serif;
     margin-top: 1rem;
+  }
+
+  .testimonial-card .quotation-mark {
+    color: #6B7280;
+    font-size: 12rem;
+    font-family: serif;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
   
   @keyframes fadeIn {
@@ -77,13 +87,13 @@
   
   .slick-dots li button:before {
     font-size: 14px;
-    color: white;
-    opacity: 0.5;
+    color: #6B7280 !important;
+    opacity: 0.5 !important;
   }
   
   .slick-dots li.slick-active button:before {
-    color: #4CAF50; /* Green for active dot */
-    opacity: 1;
+    color: var(--primary-color) !important; /* Green for active dot */
+    opacity: 1 !important;
   }
   
   /* For medium and larger screens */

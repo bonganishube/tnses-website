@@ -9,7 +9,7 @@ import testimonialThree from "../../assets/testimonials/testimonial-three.jpg";
 const testimonialData = [
   {
     id: 1,
-    name: "David Calathan - Director of Design Operations, Cape Town",
+    name: "Jane Calathan - Director of Design Operations, Cape Town",
     text: "The results have been incredible. With Power Digital, it feels like they are in our trench, supporting and understanding us. They are like a partner and mentor in helping us get where we want to be.",
     img: testimonialOne,
   },
@@ -35,7 +35,7 @@ const Testimonials = () => {
     speed: 600, // Slide transition speed
     slidesToShow: 1, // Show one testimonial at a time
     slidesToScroll: 1, // Scroll one at a time
-    autoplay: false, // Enable autoplay
+    autoplay: true, // Enable autoplay
     autoplaySpeed: 3000, // Auto transition time (in ms)
     cssEase: "linear", // Transition effect
     fade: true, // Enable fade transition
@@ -59,6 +59,9 @@ const Testimonials = () => {
                         <p>“{text}”</p>
                         <h2>{name}</h2>
                     </div>
+                    <p className='quotation-mark'>
+                        ,,
+                    </p>
                 </div>
               </div>
             ))}
