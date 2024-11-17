@@ -3,14 +3,10 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <contact>
-      <div className='contact-section'>
-        <div className='contact-us'>
-            <h1>Contact Us</h1>
-            <p>Do not hesitate to contact us.</p>
-        </div>
-        <div className='contact-container'>
-          <div className='contact-info'>
+    <div className='contact-section' id='contact'>
+      <div className='contact-container'>
+        <div className='contact-items'>
+          {/* <div className='contact-info'>
             <div>
               <h4>Contact Info</h4>
               <ul className='contact-icons'>
@@ -34,6 +30,10 @@ const Contact = () => {
               <li><a href=''><i className='fab fa-twitter'></i></a></li>
               <li><a href=''><i className='fab fa-youtube'></i></a></li>
             </ul>
+          </div> */}
+          <div className='contact-us'>
+            <h1>Contact Us</h1>
+            <p>Do not hesitate to contact us.</p>
           </div>
 
           <div className='contact-form'>
@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </contact>
+    </div>
   );
 };
 
