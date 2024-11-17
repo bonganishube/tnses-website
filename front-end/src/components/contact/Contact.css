@@ -245,6 +245,14 @@
         font-size: 1.5rem;
         margin-top: 0;
     }
+    
+    .contact-form h2 {
+        font-size: 1.125rem;
+    }
+
+    .contact-form h2::before {
+        width: 50px;
+    }
 
     .contact-us p {
         font-size: 1rem;

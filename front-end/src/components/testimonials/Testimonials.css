@@ -100,7 +100,7 @@
   /* For medium and larger screens */
   @media (max-width: 767px) {
     .testimonials-container {
-      padding: 4rem 0;
+      padding: 4rem 0 6rem 0;
     }
 
     .testimonial-section {
