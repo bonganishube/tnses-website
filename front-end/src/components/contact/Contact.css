@@ -308,6 +308,10 @@
         grid-template-columns: 35% 65%;
         align-items: stretch;
     }
+
+    .input-box input[type='submit'] {
+        width: 40%;
+    }
 }
 
 
