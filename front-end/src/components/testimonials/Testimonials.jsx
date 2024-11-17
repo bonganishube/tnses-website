@@ -57,7 +57,7 @@ const Testimonials = () => {
                             Testimonials
                         </h1>
                         <p>“{text}”</p>
-                        <h1>{name}</h1>
+                        <h2>{name}</h2>
                     </div>
                 </div>
               </div>
