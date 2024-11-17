@@ -27,6 +27,27 @@ const testimonialData = [
   },
 ];
 
+const testimonialDataMobile = [
+    {
+      id: 1,
+      name: "David Calathan - Director of Design Operations, New York",
+      text: "The results have been incredible. With Power Digital, it feels like they are in our trench, supporting and understanding us. They are like a partner and mentor in helping us get where we want to be.",
+      img: testimonialOne,
+    },
+    {
+      id: 2,
+      name: "Sarah Black - Head of Operations, California",
+      text: "I’ve never worked with a team so committed to our success. They truly go above and beyond!",
+      img: testimonialTwo,
+    },
+    {
+      id: 3,
+      name: "John Doe - CEO, London",
+      text: "Working with Power Digital has been an incredible experience. Their approach and strategies have helped us grow.",
+      img: testimonialThree,
+    },
+  ];
+
 const Testimonials = () => {
   const settings = {
     dots: true, // Show navigation dots
