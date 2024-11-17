@@ -90,8 +90,6 @@ footer .contact h4 {
   text-align: start;
 }
 
-.quick-links h4::before,
-footer .services h4::before, 
 footer .contact h4::before {
   content: '';
   position: absolute;
