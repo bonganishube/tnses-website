@@ -33,7 +33,7 @@ const Contact = () => {
           </div> */}
           <div className='contact-us'>
             <h1>Contact Us</h1>
-            <p>Do not hesitate to contact us.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
 
           <div className='contact-form'>
@@ -46,7 +46,6 @@ const Contact = () => {
                   required
                   placeholder='First Name'
                 />
-                <span>First Name</span>
               </div>
               <div className='input-box w50'>
                 <input
@@ -55,7 +54,6 @@ const Contact = () => {
                   required
                   placeholder='Last Name'
                 />
-                <span>Last Name</span>
               </div>
               <div className='input-box w50'>
                 <input
@@ -64,7 +62,6 @@ const Contact = () => {
                   required
                   placeholder='Email Address'
                 />
-                <span>Email Address</span>
               </div>
               <div className='input-box w50'>
                 <input
@@ -73,7 +70,6 @@ const Contact = () => {
                   required
                   placeholder='Mobile Number'
                 />
-                <span>Mobile Number</span>
               </div>
               <div className='input-box w100'>
                 <textarea
@@ -81,7 +77,6 @@ const Contact = () => {
                   required
                   placeholder='Message'
                 ></textarea>
-                <span>Write your message here</span>
               </div>
               <div className='input-box w100'>
                 <input type='submit' value='Send' />

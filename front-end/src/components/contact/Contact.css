@@ -23,16 +23,32 @@
     background-color: #E8EFF2;
     color: black;
     border-radius: 5px;
+    animation: fadeIn 1s forwards;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 0 4rem;
     
 }
 
+/* .contact-us {
+    width: 100%;
+} */
+
 .contact-us h1 {
+    font-size: 2rem;
+    font-weight: 700;
     font-family: 'Marcellus', sans-serif;
-    text-align: center;
-    margin: 2rem 0;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-.contact-info {
+.contact-us p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+/* .contact-info {
     position: relative;
     background-color: #172243;
     color: white;
@@ -46,7 +62,7 @@
 }
 
 .contact-info:hover {
-    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15); /* Hover effect to give a sense of depth */
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
 }
 
 .contact-info h4 {
@@ -102,23 +118,33 @@
 }
 
 .sci li a:hover i {
-    color: #3a8dff; /* Elegant hover effect on social icons */
-}
+    color: #3a8dff;
+} */
 
 .contact-form {
     background-color: white;
     padding: 3.125rem 2.5rem;
-    width: 58%;
+    width: 90%;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
     border-radius: 0 5px 5px 0;
     position: relative;
 }
 
 .contact-form h2 {
-    font-size: 28px;
+    position: relative;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #172243;
     margin-bottom: 32px;
+}
+
+.contact-form h2::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 2px; 
+    bottom: -9px;
+    background-color: #FF6100;
 }
 
 .form-box {
@@ -265,6 +291,13 @@
         bottom: 13%;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 1280px) {
+    .contact-items {
+        grid-template-columns: 40% 60%;
+        align-items: stretch;
     }
 }
 
