@@ -9,44 +9,23 @@ import testimonialThree from "../../assets/testimonials/testimonial-three.jpg";
 const testimonialData = [
   {
     id: 1,
-    name: "David Calathan - Director of Design Operations, New York",
+    name: "David Calathan - Director of Design Operations, Cape Town",
     text: "The results have been incredible. With Power Digital, it feels like they are in our trench, supporting and understanding us. They are like a partner and mentor in helping us get where we want to be.",
     img: testimonialOne,
   },
   {
     id: 2,
-    name: "Sarah Black - Head of Operations, California",
+    name: "Sarah Black - Head of Operations, Cape Town",
     text: "I’ve never worked with a team so committed to our success. They truly go above and beyond!",
     img: testimonialTwo,
   },
   {
     id: 3,
-    name: "John Doe - CEO, London",
+    name: "John Doe - CEO, Cape Town",
     text: "Working with Power Digital has been an incredible experience. Their approach and strategies have helped us grow.",
     img: testimonialThree,
   },
 ];
-
-const testimonialDataMobile = [
-    {
-      id: 1,
-      name: "David Calathan - Director of Design Operations, New York",
-      text: "The results have been incredible. With Power Digital, it feels like they are in our trench, supporting and understanding us. They are like a partner and mentor in helping us get where we want to be.",
-      img: testimonialOne,
-    },
-    {
-      id: 2,
-      name: "Sarah Black - Head of Operations, California",
-      text: "I’ve never worked with a team so committed to our success. They truly go above and beyond!",
-      img: testimonialTwo,
-    },
-    {
-      id: 3,
-      name: "John Doe - CEO, London",
-      text: "Working with Power Digital has been an incredible experience. Their approach and strategies have helped us grow.",
-      img: testimonialThree,
-    },
-  ];
 
 const Testimonials = () => {
   const settings = {
