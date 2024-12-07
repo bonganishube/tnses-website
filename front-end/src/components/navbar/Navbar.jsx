@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 import Logo from '../../assets/logo.png';
 import Dropdown from './Dropdown';
 import DarkMode from './DarkMode';
-import ResponsiveMenu from './ResponsiveMenu';
 import { HiMenuAlt3, HiMenuAlt1 } from 'react-icons/hi';
 
 export const MenuLinks = [
@@ -63,7 +62,7 @@ const Navbar = () => {
             <h1>TNSES</h1>
           </div>
 
-          {/* Desktop View */}
+          {/* Desktop view */}
           <div className='desktop-view'>
             <ul className='nav-links'>
               {MenuLinks.map(({ id, name, link }) => {
@@ -95,7 +94,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile View */}
+          {/* Mobile view */}
           <div className='mobile-view'>
             <div className='darkmode-mobile'>
               <DarkMode setTheme={setTheme} theme={theme} />
@@ -116,7 +115,6 @@ const Navbar = () => {
 
         </div>
       </div>
-      {/* <ResponsiveMenu showMenu={showMenu} /> */}
     </nav>
   );
 };
