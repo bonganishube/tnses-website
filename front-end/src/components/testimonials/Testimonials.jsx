@@ -1,4 +1,3 @@
-import React from 'react';
 import Slider from 'react-slick';
 import './Testimonials.css';
 
@@ -57,7 +56,7 @@ const Testimonials = () => {
                             Testimonials
                         </h1>
                         <p>“{text}”</p>
-                        <h2>{name}</h2>
+                        <h2 className='testimonial-name'>{name}</h2>
                     </div>
                     <p className='quotation-mark'>
                         ,,

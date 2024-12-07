@@ -68,6 +68,10 @@
     margin-top: 1rem;
   }
 
+  .testimonial-name {
+    font-style: italic;
+  }
+
   .testimonial-card .quotation-mark {
     color: #6B7280;
     font-size: 12rem;
