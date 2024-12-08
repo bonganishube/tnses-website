@@ -1,22 +1,31 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
+import './Dropdown.css';
 import Logo from '../../assets/logo.png';
-import Dropdown from './Dropdown';
-import DarkMode from './DarkMode';
 import { HiMenuAlt3, HiMenuAlt1 } from 'react-icons/hi';
-
-export const MenuLinks = [
-  { id: 1, name: 'Home', link: '/#home' },
-  { id: 2, name: 'Services', link: '/#services' },
-  { id: 3, name: 'About', link: '/#about' },
-  { id: 4, name: 'Contact', link: '/#contact' }
-];
+import { FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const MenuLinks = [
+    { id: 1, name: 'Home', link: '/#home', hasDropdown: false },
+    { id: 2, name: 'Services', link: '/#services', hasDropdown: true },
+    { id: 3, name: 'About', link: '/#about', hasDropdown: false },
+    { id: 4, name: 'Contact', link: '/#contact', hasDropdown: false },
+  ];
+
+  const DropdownItems = {
+    Services: [
+      { id: 1, name: 'Google for Education', link: './#google-for-education' },
+      { id: 2, name: 'Blueprint', link: './#blueprint' },
+      { id: 3, name: 'Mentorship', link: './#mentorship' },
+    ],
+    // Add more items if needed for other dropdowns
+  };
 
   // Handle sticky navbar logic
   useEffect(() => {
@@ -34,85 +43,86 @@ const Navbar = () => {
     };
   }, []);
 
-  // Update theme in localStorage when it changes
+  // Manage dropdown behavior with useEffect for dynamic handling
   useEffect(() => {
-    localStorage.setItem('theme', theme);
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-    }
-  }, [theme]);
+    const handleOutsideClick = (e) => {
+      // Close dropdown if clicking outside
+      if (!e.target.closest('.dropdown-container')) {
+        setActiveDropdown(null); // Close the active dropdown
+      }
+    };
 
-  // Open/close dropdown when hovering over Services link
-  const handleDropdownToggle = (state) => {
-    setDropdownOpen(state);
+    if (activeDropdown !== null) {
+      document.addEventListener('click', handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [activeDropdown]);
+
+  const handleDropdownToggle = (item) => {
+    if (activeDropdown === item) {
+      setActiveDropdown(null); // Close dropdown if it's already open
+    } else {
+      setActiveDropdown(item); // Open the new dropdown
+    }
   };
 
   return (
-    <nav className={`${sticky ? 'dark-nav' : ''} ${theme === 'dark' ? 'dark' : ''}`}>
-      <div className='navbar-container'>
-        <div className='navbar-items'>
-          <div className='logo'>
+    <nav className={`${sticky ? 'dark-nav' : ''}`}>
+      <div className="navbar-container">
+        <div className="navbar-items">
+          <div className="logo">
             <a href="#">
-              <img src={Logo} alt='logo' />
+              <img src={Logo} alt="logo" />
             </a>
             <h1>TNSES</h1>
           </div>
 
           {/* Desktop view */}
-          <div className='desktop-view'>
-            <ul className='nav-links'>
-              {MenuLinks.map(({ id, name, link }) => {
-                if (name === 'Services') {
-                  return (
-                    <li 
-                      key={id} 
-                      onMouseEnter={() => handleDropdownToggle(true)} 
-                      onMouseLeave={() => handleDropdownToggle(false)}
-                      style={{ position: 'relative' }}
-                    >
-                      <a href={link} className='nav-link'>{name}</a>
-                      {dropdownOpen && <Dropdown isOpen={dropdownOpen} closeDropdown={() => setDropdownOpen(false)} />}
-                    </li>
-                  );
-                }
+          <div className="desktop-view">
+            <ul className="nav-links">
+              {MenuLinks.map(({ id, name, link, hasDropdown }) => {
                 return (
-                  <li key={id}>
-                    <a href={link} className='nav-link'>{name}</a>
+                  <li
+                    key={id}
+                    className={`nav-item ${hasDropdown ? 'dropdown-container' : ''}`}
+                    onMouseEnter={() => hasDropdown && handleDropdownToggle(name)}
+                    onMouseLeave={() => hasDropdown && setActiveDropdown(null)}
+                    style={{ position: 'relative' }}
+                  >
+                    <a href={link} className="nav-link">
+                      {name}
+                      {hasDropdown && <FiChevronDown style={{ marginLeft: '5px' }} />}
+                    </a>
+                    {hasDropdown && activeDropdown === name && (
+                      <div className="services-submenu open">
+                        <ul>
+                          {DropdownItems[name]?.map(({ id, name, link }) => (
+                            <li key={id}>
+                              <a
+                                href={link}
+                                className="submenu-item"
+                                onClick={(e) => {
+                                  e.stopPropagation(); // Prevent dropdown from closing when clicking the item
+                                  setActiveDropdown(null); // Close the dropdown after clicking an item
+                                }}
+                              >
+                                {name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </li>
                 );
               })}
             </ul>
             <button>
-              <i className='fa fa-sign-out'></i>Sign In
+              <i className="fa fa-sign-out"></i>Sign In
             </button>
-            <div className='darkmode-desktop'>
-              <DarkMode setTheme={setTheme} theme={theme} />
-            </div>
           </div>
-
-          {/* Mobile view */}
-          <div className='mobile-view'>
-            <div className='darkmode-mobile'>
-              <DarkMode setTheme={setTheme} theme={theme} />
-            </div>
-            <button>
-              <i className='fa fa-sign-out'></i>Sign In
-            </button>
-            {showMenu ? (
-            <div className='himenualt1'>
-              <HiMenuAlt1 onClick={() => setShowMenu(false)} />
-            </div>
-            ) : (
-            <div className='himenualt3'>
-              <HiMenuAlt3 onClick={() => setShowMenu(true)} />
-            </div>
-            )}
-          </div>
-
         </div>
       </div>
     </nav>

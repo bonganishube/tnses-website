@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './Dropdown.css';
 
 export const Dropdown = ({ isOpen, closeDropdown }) => {
@@ -31,3 +30,22 @@ export const Dropdown = ({ isOpen, closeDropdown }) => {
 };
 
 export default Dropdown;
+
+{/* Mobile view */}
+          {/* <div className='mobile-view'>
+            <div className='darkmode-mobile'>
+              <DarkMode setTheme={setTheme} theme={theme} />
+            </div>
+            <button>
+              <i className='fa fa-sign-out'></i>Sign In
+            </button>
+            {showMenu ? (
+            <div className='himenualt1'>
+              <HiMenuAlt1 onClick={() => setShowMenu(false)} />
+            </div>
+            ) : (
+            <div className='himenualt3'>
+              <HiMenuAlt3 onClick={() => setShowMenu(true)} />
+            </div>
+            )}
+          </div> */}

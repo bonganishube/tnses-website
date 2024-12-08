@@ -17,4 +17,5 @@
 .dark {
     --bg-color: black;
     --text-color: white;
+    transition: var(--transition);
 }
