@@ -56,11 +56,6 @@ const Header = () => {
                         menuToggleIcon ? "hide-icon" : ""
                     }`}
                     ></i>
-                    <i
-                    className={`ri-close-line nav__close ${
-                        menuToggleIcon ? "" : "hide-icon"
-                    }`}
-                    ></i>
                 </div>
           </div>
 
@@ -71,6 +66,27 @@ const Header = () => {
             className={`nav__menu ${menuVisible ? "show-menu" : ""}`}
             id="nav-menu"
           >
+            <div
+                className={`nav__toggle ${menuToggleIcon ? "show-icon" : ""} nav__data`}
+                onClick={handleToggleClick}
+            >
+                <a href="#" className="nav__logo ">
+                    <img 
+                        src={Logo}
+                        alt="Logo"
+                        width="40"
+                        className="nav__logo"
+                    />
+                    <span>TNSES</span>
+                </a>
+
+                <i
+                    className={`ri-close-line nav__close ${
+                    menuToggleIcon ? "" : "hide-icon"
+                    }`}
+                    ></i>
+            </div>
+
             <ul className="nav__list">
               <li>
                 <a href="#" className="nav__link">
