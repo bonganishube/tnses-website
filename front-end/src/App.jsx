@@ -1,6 +1,5 @@
-import React from 'react';
+import Header from './components/header/Header';
 import Carousel from './components/hero/Carousel';
-import Navbar from './components/navbar/Navbar';
 import Brands from './components/brands/Brands';
 import Services from './components/services/Services';
 import About from './components/about/About';
@@ -15,7 +14,7 @@ const App = () => {
   return (
     <div>
       <Carousel />
-      <Navbar />
+      <Header />
       <Brands />
       <Services /> 
       <About />
