@@ -343,7 +343,54 @@
     margin-block: 3rem;
   }
 
+  .nav-btn-md {
+    display: none;
+  }
+
   .nav-darkmode-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1050px) {
+  .nav-btn-md {
+    display: flex;
+    margin-right: 1.5rem;
+  }
+
+  .signup-btn {
+    position: relative;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 0.125rem solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    font-size: var(--p-sm);
+    font-weight: 600;
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
+    border-radius: var(--border-radius-1);
+    margin-left: 1rem;
+    margin-block: 3rem;
+  }
+
+  .login-btn {
+    position: relative;
+    color: var(--white-color);
+    background-color: transparent;
+    border: 0.125rem solid var(--white-color);
+    display: flex;
+    align-items: center;
+    font-size: var(--p-sm);
+    font-weight: 600;
+    padding-inline: 1rem;
+    padding-block: 0.475rem;
+    border-radius: var(--border-radius-1);
+    margin-inline: 1rem;
+    margin-block: 3rem;
+  } 
+
+  .nav-btn {
     display: none;
   }
 }
@@ -365,6 +412,7 @@
   }
 
   .nav-logo-overlay,
+  .nav-close-section h1, 
   .nav-close {
     display: none;
   }
@@ -500,6 +548,10 @@
     border-radius: var(--border-radius-1);
     margin-right: 1rem;
     margin-left: 0.5rem;
+  }
+
+  .nav-btn-md {
+    display: none;
   }
 
   .nav-darkmode-lg {

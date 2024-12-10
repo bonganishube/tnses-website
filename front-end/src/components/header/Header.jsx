@@ -88,8 +88,19 @@ const Header = () => {
                 <span>TNSES</span>
           </a>
 
+          
+
           {/* small screen */}
           <div className="header-section-sm">
+
+          <div className="nav-btn-md">
+                <button className="signup-btn">
+                    Sign Up
+                </button>
+                <button className="login-btn">
+                    Log In
+                </button>
+                </div>
                 <div className="header-darkmode-sm">
                     <DarkMode />
                 </div>
