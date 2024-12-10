@@ -38,7 +38,7 @@
 }
 
 .nav-logo img {
-  width: 45px;
+  width: 40px;
   border-radius: var(--border-radius-1);
 }
 
@@ -142,7 +142,7 @@
     width: 35px;
   }
   .nav-logo span {
-    font-size: var(--h2-sm);
+    font-size: var(--h1-sm);
   }
 
   .header-section-sm {
@@ -360,6 +360,7 @@
     column-gap: 2rem;
     margin-right: 1rem;
     align-items: center;
+    /* margin: auto; */
   }
 
   .nav-link {
