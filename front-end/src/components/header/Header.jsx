@@ -124,12 +124,14 @@ const Header = () => {
                     />
                     <span>TNSES</span>
                 </a>
-
-                <i
-                    className={`ri-close-line nav-close ${
-                    menuToggleIcon ? "" : "hide-icon"
-                    }`}
-                ></i>
+                <div className="nav-close-section">
+                  <h1>Close</h1>
+                  <i
+                      className={`ri-close-line nav-close ${
+                      menuToggleIcon ? "" : "hide-icon"
+                      }`}
+                  ></i>
+                </div>
             </div>
           <div>
 
