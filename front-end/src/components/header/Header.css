@@ -66,6 +66,7 @@
 }
 .accordion-btn, 
 .accordion-btn-submenu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,6 +84,11 @@
 .accordion-card.expanded .accordion-btn .dropdown-arrow, 
 .accordion-card-submenu.expanded .accordion-btn-submenu .dropdown-arrow {
   transform: rotate(0.5turn);
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 0%;
 }
 
 .accordion-btn .span,
