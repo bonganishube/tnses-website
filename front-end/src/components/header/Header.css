@@ -202,8 +202,8 @@
   }
   .nav-close {
     border-radius: var(--border-radius-1);
-    border: 0.5rem solid color-mix(in srgb, var(--secondary-color) 95%, white 5%);
-    background-color: color-mix(in srgb, var(--secondary-color) 95%, white 5%);
+    border: 0.5rem solid color-mix(in srgb, var(--secondary-color) 90%, white 10%);
+    background-color: color-mix(in srgb, var(--secondary-color) 90%, white 10%);
   }
   
   .nav-burger,
@@ -212,7 +212,7 @@
     width: max-content;
     height: max-content;
     inset: 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     cursor: pointer;
     transition: opacity .1s, transform .4s;
   }
