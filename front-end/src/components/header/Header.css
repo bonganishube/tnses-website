@@ -38,7 +38,7 @@
 }
 
 .nav-logo img {
-  width: 50px;
+  width: 45px;
   border-radius: var(--border-radius-1);
 }
 
@@ -139,7 +139,7 @@
   }
 
   .nav-logo img {
-    width: 40px;
+    width: 35px;
   }
   .nav-logo span {
     font-size: var(--h2-sm);
@@ -159,7 +159,7 @@
   }
   
   .header-pipe {
-    margin-inline: 0.7rem;
+    margin-inline: 1rem;
   }
   
   .header-section-sm h1 {
@@ -191,7 +191,7 @@
     color: var(--white-color);
   }
   .nav-logo-overlay img {
-    width: 40px;
+    width: 35px;
     border-radius: var(--border-radius-1);
   }
 
