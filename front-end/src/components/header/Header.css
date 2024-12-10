@@ -29,6 +29,7 @@
 
 .nav-logo {
   display: inline-flex;
+  
   align-items: center;
   column-gap: .25rem;
   font-family: var(--secondary-font);
@@ -37,11 +38,12 @@
 }
 
 .nav-logo img {
+  width: 50px;
   border-radius: var(--border-radius-1);
 }
 
 .nav-logo span {
-  margin-top: 0.8rem;
+  /* margin-top: 0.8rem; */
   margin-left: 0.3rem
 }
 
@@ -136,6 +138,9 @@
     padding-inline: var(--container-padding-sm);
   }
 
+  .nav-logo img {
+    width: 40px;
+  }
   .nav-logo span {
     font-size: var(--h2-sm);
   }
@@ -186,12 +191,13 @@
     color: var(--white-color);
   }
   .nav-logo-overlay img {
+    width: 40px;
     border-radius: var(--border-radius-1);
   }
 
   .nav-logo-overlay span {
     font-size: var(--h2-sm);
-    margin-top: 0.8rem;
+    /* margin-top: 0.8rem; */
     margin-left: 0.3rem
   }
   .nav-close {

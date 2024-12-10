@@ -121,7 +121,6 @@ const Header = () => {
                     <img 
                         src={Logo}
                         alt="Logo"
-                        width="40"
                     />
                     <span>TNSES</span>
                 </a>
