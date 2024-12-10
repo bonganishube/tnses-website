@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import Logo from "../../assets/logo.png"
 import  DarkMode from "../darkmode/DarkMode";
@@ -7,6 +7,7 @@ const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuToggleIcon, setMenuToggleIcon] = useState(false);
   const [isHeaderActive, setIsHeaderActive] = useState(false);
+  const accordionContainerRef = useRef(null);
 
   const handleToggleClick = () => {
     setMenuVisible((prev) => !prev);
@@ -27,168 +28,205 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const accordions = accordionContainerRef.current.querySelectorAll("[data-accordion]");
+
+    const initAccordion = (currentAccordion) => {
+      const accordionBtn = currentAccordion.querySelector("[data-accordion-btn]");
+
+      const toggleAccordion = () => {
+        const isExpanded = currentAccordion.classList.contains("expanded");
+        currentAccordion.classList.toggle("expanded", !isExpanded);
+      };
+
+      const hoverExpand = () => {
+        if (window.innerWidth > 770) {
+          currentAccordion.classList.add("expanded");
+        }
+      };
+
+      const hoverCollapse = () => {
+        if (window.innerWidth > 770) {
+          currentAccordion.classList.remove("expanded");
+        }
+      };
+
+      // Add click listener
+      accordionBtn.addEventListener("click", toggleAccordion);
+
+      // Add hover listeners for larger screens
+      currentAccordion.addEventListener("mouseenter", hoverExpand);
+      currentAccordion.addEventListener("mouseleave", hoverCollapse);
+
+      // Cleanup event listeners when component unmounts
+      return () => {
+        accordionBtn.removeEventListener("click", toggleAccordion);
+        currentAccordion.removeEventListener("mouseenter", hoverExpand);
+        currentAccordion.removeEventListener("mouseleave", hoverCollapse);
+      };
+    };
+
+    // Initialize all accordions
+    const cleanups = Array.from(accordions).map(initAccordion);
+
+    // Cleanup all event listeners
+    return () => {
+      cleanups.forEach((cleanup) => cleanup && cleanup());
+    };
+  }, []);
+
   return (
-    <header className={`header ${isHeaderActive ? "active" : ""}`}>
-      <nav className="nav__container">
-        <div className="nav__data">
-          <a href="#" className="nav__logo">
+    <header className={`header-section ${isHeaderActive ? "active" : ""}`}>
+      <nav className="nav-container">
+        <div className="nav-items">
+          <a href="#" className="nav-logo">
                 <img 
                     src={Logo}
                     alt="Logo"
                     width="40"
-                    className="nav__logo"
                 />
                 <span>TNSES</span>
           </a>
 
-          <div className="nav__menu__section">
-                <div className="nav__darkmode__sm">
+          {/* small screen */}
+          <div className="header-section-sm">
+                <div className="header-darkmode-sm">
                     <DarkMode />
                 </div>
-                <span className="nav__pipe">|</span>
-                <h1 className="nav__menu__heading">Menu</h1>
+                <span className="header-pipe">|</span>
+                <h1>Menu</h1>
                 <div
-                    className={`nav__toggle ${menuToggleIcon ? "show-icon" : ""}`}
+                    className={`nav-toggle ${menuToggleIcon ? "show-icon" : ""}`}
                     onClick={handleToggleClick}
                 >
                     <i
-                    className={`ri-menu-line nav__burger ${
+                    className={`ri-menu-line nav-burger ${
                         menuToggleIcon ? "hide-icon" : ""
                     }`}
                     ></i>
                 </div>
           </div>
 
-            
-
+  
           {/* nav menu */}
           <div
-            className={`nav__menu ${menuVisible ? "show-menu" : ""}`}
+            className={`nav-menu ${menuVisible ? "show-menu" : ""}`}
             id="nav-menu"
           >
             <div
-                className={`nav__toggle ${menuToggleIcon ? "show-icon" : ""} nav__data`}
+                className={`nav-toggle-overlay ${menuToggleIcon ? "show-icon" : ""} nav-items`}
                 onClick={handleToggleClick}
             >
-                <a href="#" className="nav__logo ">
+                <a href="#" className="nav-logo-overlay">
                     <img 
                         src={Logo}
                         alt="Logo"
                         width="40"
-                        className="nav__logo"
                     />
                     <span>TNSES</span>
                 </a>
 
                 <i
-                    className={`ri-close-line nav__close ${
+                    className={`ri-close-line nav-close ${
                     menuToggleIcon ? "" : "hide-icon"
                     }`}
-                    ></i>
+                ></i>
             </div>
+          <div>
 
-            <ul className="nav__list">
+      <ul className="nav-list" ref={accordionContainerRef}>
+        <li>
+          <a href="#" className="nav-link">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" className="nav-link">
+            About
+          </a>
+        </li>
+
+        {/* dropdown 1 accordion */}
+        <li className="dropdown-item">
+          <div className="accordion-card" data-accordion>
+            <a className="accordion-btn" data-accordion-btn>
+              <div className="nav-link">
+                <span>Services</span>
+                <i className="ri-arrow-down-s-line dropdown-arrow"></i>
+              </div>
+            </a>
+            <ul className="accordion-content dropdown-menu">
               <li>
-                <a href="#" className="nav__link">
-                  Home
+                <a href="#" className="dropdown-link">
+                  <i className="ri-pie-chart-line"></i> Applied Digital Skills
                 </a>
               </li>
               <li>
-                <a href="#" className="nav__link">
-                  About
+                <a href="#" className="dropdown-link">
+                  <i className="ri-arrow-up-down-line"></i> Blueprint
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown-link">
+                  <i className="ri-file-list-line"></i> Mentorship
                 </a>
               </li>
 
-              {/* dropdown 1 */}
-              <li className="dropdown__item">
-                <div className="nav__link">
-                  Services<i className="ri-arrow-down-s-line dropdown__arrow"></i>
+              {/* dropdown submenu accordion */}
+              {/* <li className="dropdown-subitem">
+                <div className="accordion-card-submenu" data-accordion>
+                  <a className="accordion-btn-submenu" data-accordion-btn>
+                    <div className="dropdown-link">
+                      <i className="ri-bar-chart-line"></i>
+                      <span className="span h5">Mentorship</span>
+                      <i className="ri-add-line dropdown-add"></i>
+                    </div>
+                  </a>
+                  <ul className="accordion-content-submenu dropdown-submenu">
+                    <li>
+                      <a href="#" className="dropdown-sublink">
+                        <i className="ri-file-list-line"></i> Documents
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="dropdown-link">
+                        <i className="ri-cash-line"></i> Payments
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="dropdown-link">
+                        <i className="ri-refund-2-line"></i> Refunds
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-
-                <ul className="dropdown__menu">
-                    <li>
-                        <a href="#" className="dropdown__link">
-                            <i className="ri-pie-chart-line"></i> Applied Digital Skills
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="dropdown__link">
-                            <i className="ri-arrow-up-down-line"></i> Blueprint
-                        </a>
-                    </li>
-
-                    {/* dropdown submenu */}
-                    <li className="dropdown__subitem">
-                        <div className="dropdown__link">
-                            <i className="ri-bar-chart-line"></i> Mentorship <i className="ri-add-line dropdown__add"></i>
-                        </div>
-
-                        <ul className="dropdown__submenu">
-                            <li>
-                                <a href="#" className="dropdown__sublink">
-                                    <i className="ri-file-list-line"></i> Documents
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="dropdown__sublink">
-                                    <i className="ri-cash-line"></i> Payments
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="dropdown__sublink">
-                                    <i className="ri-refund-2-line"></i> Refunds
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" className="nav__link">
-                  Products
-                </a>
-              </li>
-
-              {/* dropdown 2 */}
-              {/* <li className="dropdown__item">
-                <div className="nav__link">
-                  Users <i className="ri-arrow-down-s-line dropdown__arrow"></i>
-                </div>
-
-                <ul className="dropdown__menu">
-                    <li>
-                        <a href="#" className="dropdown__link">
-                            <i className="ri-user-line"></i> Profiles
-                         </a>
-                    </li>
-                    <li>
-                        <a href="#" className="dropdown__link">
-                            <i className="ri-lock-line"></i> Accounts
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="dropdown__link">
-                            <i className="ri-message-3-line"></i> Messages
-                        </a>
-                    </li>
-                </ul>
               </li> */}
-              <li>
-                <a href="#" className="nav__link">
-                  Contact
-                </a>
-              </li>
             </ul>
-            <div className="nav__btn">
-                <button className="signup__btn">
+          </div>
+        </li>
+        <li>
+          <a href="#" className="nav-link">
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="#" className="nav-link">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+
+            <div className="nav-btn">
+                <button className="signup-btn">
                     Sign Up
                 </button>
-                <button className="login__btn">
+                <button className="login-btn">
                     Log In
                 </button>
             </div>
 
-            <div className="nav__darkmode__md">
+            <div className="nav-darkmode-lg">
                     <DarkMode />
             </div>
           </div>
