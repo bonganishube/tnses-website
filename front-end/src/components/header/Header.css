@@ -201,9 +201,9 @@
     margin-left: 0.3rem
   }
   .nav-close {
+    opacity: 0;
     border-radius: var(--border-radius-1);
-    border: 0.5rem solid color-mix(in srgb, var(--secondary-color) 90%, white 10%);
-    background-color: color-mix(in srgb, var(--secondary-color) 90%, white 10%);
+    margin-top: 0.2rem;
   }
   
   .nav-burger,
@@ -215,10 +215,6 @@
     font-size: 1.7rem;
     cursor: pointer;
     transition: opacity .1s, transform .4s;
-  }
-  
-  .nav-close {
-   opacity: 0;
   }
 
   .nav-close-section {
