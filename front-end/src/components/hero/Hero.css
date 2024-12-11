@@ -240,12 +240,16 @@
     .list .item .content{
         top: 38%;
         left: 4%;
-        max-width: 350px;
+        max-width: 335px;
+        padding-block: 1.5rem;
+        padding-inline: 0.8rem;
     }
 
 
     .content .title, .content .name{
-        font-size: 45px;
+        font-size: 40px;
+        display: inline-block;
+        margin-left: 0.4rem;
     }
 
     .content .btn button{
