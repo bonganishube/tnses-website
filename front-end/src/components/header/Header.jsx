@@ -17,7 +17,7 @@ const Header = () => {
   useEffect(() => {
     // Header active state on scroll
     const handleScroll = () => {
-      setIsHeaderActive(window.scrollY > 100);
+      setIsHeaderActive(window.scrollY > 600);
     };
 
     window.addEventListener("scroll", handleScroll);

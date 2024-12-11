@@ -3,6 +3,9 @@ import "./Hero.css";
 import Img1 from "../../assets/carousel/google-education-mobile.jpg";
 import Img2 from "../../assets/carousel/blueprint-mobile.jpg";
 import Img3 from "../../assets/carousel/readiness-mobile.jpg";
+import Img4 from "../../assets/carousel/google-education.jpg";
+import Img5 from "../../assets/carousel/blueprint.jpg";
+import Img6 from "../../assets/carousel/readiness.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoPlayOutline } from "react-icons/io5";
@@ -148,7 +151,7 @@ const Hero = () => {
 
           <div
             className="item"
-            style={{ backgroundImage: `url(${Img1})` }}
+            style={{ backgroundImage: `url(${Img4})` }}
           >
             <div className="content">
               <div className="title">SLIDER</div>
@@ -167,7 +170,7 @@ const Hero = () => {
 
           <div
             className="item"
-            style={{ backgroundImage: `url(${Img2})` }}
+            style={{ backgroundImage: `url(${Img5})` }}
           >
             <div className="content">
               <div className="title">SLIDER</div>
@@ -186,7 +189,7 @@ const Hero = () => {
 
           <div
             className="item"
-            style={{ backgroundImage: `url(${Img3})` }}
+            style={{ backgroundImage: `url(${Img6})` }}
           >
             <div className="content">
               <div className="title">SLIDER</div>
