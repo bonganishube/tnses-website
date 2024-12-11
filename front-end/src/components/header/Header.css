@@ -138,6 +138,12 @@
   margin-left: auto;
 }
 
+.login-button:hover{
+  background-color: transparent;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
 
 @media (max-width: 1050px) {
   .nav-container {
