@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import Logo from "../../assets/logo.png"
-import  DarkMode from "../darkmode/DarkMode";
+// import  DarkMode from "../darkmode/DarkMode";
 
 const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -79,7 +79,7 @@ const Header = () => {
     <header className={`header-section ${isHeaderActive ? "active" : ""}`}>
       <nav className="nav-container">
         <div className="nav-items">
-          <a href="#" className="nav-logo">
+          <a href="#" className={`nav-logo ${isHeaderActive ? "active" : ""}`}>
                 <img 
                     src={Logo}
                     alt="Logo"
@@ -91,19 +91,19 @@ const Header = () => {
           
 
           {/* small screen */}
-          <div className="header-section-sm">
+          <div className={`header-section-sm ${isHeaderActive ? "active" : ""}`}>
 
           <div className="nav-btn-md">
                 <button className="signup-btn">
                     Sign Up
                 </button>
-                <button className="login-btn">
+                <button className={`login-btn ${isHeaderActive ? "active" : ""}`}>
                     Log In
                 </button>
                 </div>
-                <div className="header-darkmode-sm">
+                {/* <div className="header-darkmode-sm">
                     <DarkMode />
-                </div>
+                </div> */}
                 <span className="header-pipe">|</span>
                 <h1>Menu</h1>
                 <div
@@ -113,7 +113,7 @@ const Header = () => {
                     <i
                     className={`ri-menu-line nav-burger ${
                         menuToggleIcon ? "hide-icon" : ""
-                    }`}
+                    } ${isHeaderActive ? "active" : ""}`}
                     ></i>
                 </div>
           </div>
@@ -148,12 +148,12 @@ const Header = () => {
 
       <ul className="nav-list" ref={accordionContainerRef}>
         <li>
-          <a href="#" className="nav-link">
+          <a href="#" className={`nav-link ${isHeaderActive ? "active" : ""}`}>
             Home
           </a>
         </li>
         <li>
-          <a href="#" className="nav-link">
+          <a href="#" className={`nav-link ${isHeaderActive ? "active" : ""}`}>
             About
           </a>
         </li>
@@ -162,7 +162,7 @@ const Header = () => {
         <li className="dropdown-item">
           <div className="accordion-card" data-accordion>
             <a className="accordion-btn" data-accordion-btn>
-              <div className="nav-link">
+              <div className={`nav-link ${isHeaderActive ? "active" : ""}`}>
                 <span>Services</span>
                 <i className="ri-arrow-down-s-line dropdown-arrow"></i>
               </div>
@@ -217,12 +217,12 @@ const Header = () => {
           </div>
         </li>
         <li>
-          <a href="#" className="nav-link">
+          <a href="#" className={`nav-link ${isHeaderActive ? "active" : ""}`}>
             Products
           </a>
         </li>
         <li>
-          <a href="#" className="nav-link">
+          <a href="#" className={`nav-link ${isHeaderActive ? "active" : ""}`}>
             Contact
           </a>
         </li>
@@ -233,14 +233,14 @@ const Header = () => {
                 <button className="signup-btn">
                     Sign Up
                 </button>
-                <button className="login-btn">
+                <button className={`login-btn ${isHeaderActive ? "active" : ""}`}>
                     Log In
                 </button>
             </div>
 
-            <div className="nav-darkmode-lg">
+            {/* <div className={`nav-darkmode-lg ${isHeaderActive ? "active" : ""}`}>
                     <DarkMode />
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

@@ -87,8 +87,7 @@ const Hero = () => {
   };
 
   return (
-    <section>
-      <div className="carousel-container">
+      <section className="carousel-container">
         <div className="list">
           <div
             className="item"
@@ -216,8 +215,7 @@ const Hero = () => {
           <button className="next"><IoIosArrowForward /></button>
         </div>
         <div className="timeRunning"></div>
-      </div>
-    </section>
+      </section>
   );
 };
 
