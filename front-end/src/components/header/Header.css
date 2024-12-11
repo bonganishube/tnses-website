@@ -164,6 +164,10 @@
 }
 
 @media (max-width: 767px) {
+  .header-section {
+    padding-top: env(safe-area-inset-top); /* Account for the notch on iPhones */
+  }
+  
   .nav-container {
     height: 4rem;
   }
