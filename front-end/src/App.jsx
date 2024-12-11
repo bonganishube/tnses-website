@@ -1,5 +1,5 @@
 import Header from './components/header/Header';
-import Carousel from './components/hero/Carousel';
+// import Carousel from './components/hero/Carousel';
 import Brands from './components/brands/Brands';
 import Services from './components/services/Services';
 import About from './components/about/About';
