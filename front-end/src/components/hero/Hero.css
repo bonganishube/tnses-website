@@ -74,7 +74,7 @@
     height: auto;
     text-align: left;
     color: #fff;
-    background: linear-gradient(to right, rgba(10, 15, 30, 0.5) 60%, rgba(255, 255, 255, 0.3) 100%); /* Fading effect on the right */
+    background: linear-gradient(to right, rgba(10, 15, 30, 0.7) 60%, rgba(255, 255, 255, 0.3) 100%); /* Fading effect on the right */
     padding: 2rem;
     border-left: 3px solid var(--secondary-color);
     border-radius: var(--border-radius-1);
