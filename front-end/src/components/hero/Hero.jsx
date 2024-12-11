@@ -114,7 +114,7 @@ const Hero = () => {
           >
             <div className="content">
               <div className="title">SLIDER</div>
-              <div className="name">ONE</div>
+              <div className="name">TWO</div>
               <div className="des">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Officiis culpa similique consequuntur, reprehenderit dicta
@@ -133,7 +133,7 @@ const Hero = () => {
           >
             <div className="content">
               <div className="title">SLIDER</div>
-              <div className="name">ONE</div>
+              <div className="name">THREE</div>
               <div className="des">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Officiis culpa similique consequuntur, reprehenderit dicta
@@ -152,7 +152,7 @@ const Hero = () => {
           >
             <div className="content">
               <div className="title">SLIDER</div>
-              <div className="name">ONE</div>
+              <div className="name">FOUR</div>
               <div className="des">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Officiis culpa similique consequuntur, reprehenderit dicta
@@ -171,7 +171,7 @@ const Hero = () => {
           >
             <div className="content">
               <div className="title">SLIDER</div>
-              <div className="name">ONE</div>
+              <div className="name">FIVE</div>
               <div className="des">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Officiis culpa similique consequuntur, reprehenderit dicta
@@ -190,7 +190,7 @@ const Hero = () => {
           >
             <div className="content">
               <div className="title">SLIDER</div>
-              <div className="name">ONE</div>
+              <div className="name">SIX</div>
               <div className="des">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Officiis culpa similique consequuntur, reprehenderit dicta
